@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { projects } from "@/data/projects";
 import {
   Carousel,
@@ -9,7 +10,7 @@ import {
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-20 bg-charcoal">
+    <section id="projects" className="scroll-mt-28 py-20 bg-charcoal">
       <div className="container mx-auto px-4">
         <h2 className="font-poppins text-3xl md:text-4xl font-bold text-charcoal-foreground text-center mb-4">
           Featured Projects
@@ -21,27 +22,24 @@ const Projects = () => {
         <div className="max-w-4xl mx-auto px-12">
           <Carousel opts={{ loop: true }}>
             <CarouselContent>
-              {projects.map((project) => (
+              {projects.slice(0, 3).map((project) => (
                 <CarouselItem key={project.id}>
                   <div className="flex flex-col md:flex-row gap-6 items-center">
                     <div className="w-full md:w-1/2 overflow-hidden rounded-lg">
                       <img
-                        src={project.image}
+                        src={project.images[0]}
                         alt={project.title}
                         className="w-full h-64 object-cover"
                         loading="lazy"
                       />
                     </div>
                     <div className="w-full md:w-1/2 text-charcoal-foreground">
-                      <span className="text-gold text-sm font-semibold uppercase tracking-wider">
+                      <span className="inline-flex rounded-full bg-white/10 px-3 py-1 text-xs uppercase tracking-[0.2em] text-charcoal-foreground/80">
                         {project.category}
                       </span>
-                      <h3 className="font-poppins text-2xl font-bold mt-2 mb-3">
+                      <h3 className="font-poppins text-2xl font-bold mt-3 mb-3">
                         {project.title}
                       </h3>
-                      <p className="text-charcoal-foreground/80 leading-relaxed">
-                        {project.description}
-                      </p>
                     </div>
                   </div>
                 </CarouselItem>
@@ -50,6 +48,15 @@ const Projects = () => {
             <CarouselPrevious className="text-charcoal-foreground border-charcoal-foreground/30 hover:bg-charcoal-foreground/10" />
             <CarouselNext className="text-charcoal-foreground border-charcoal-foreground/30 hover:bg-charcoal-foreground/10" />
           </Carousel>
+
+          <div className="mt-10 flex justify-center">
+            <Link
+              to="/projects"
+              className="inline-flex rounded-full bg-gold px-8 py-3 text-sm font-semibold text-dark transition hover:bg-gold-light"
+            >
+              View More Projects
+            </Link>
+          </div>
         </div>
       </div>
     </section>

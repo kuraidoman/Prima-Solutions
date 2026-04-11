@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center"
+      className="scroll-mt-28 relative min-h-screen flex items-center justify-center"
     >
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -34,7 +34,7 @@ const Hero = () => {
           <Button
             size="lg"
             variant="outline"
-            className="border-dark-foreground text-dark-foreground hover:bg-dark-foreground/10 font-poppins font-semibold px-8"
+            className="text-black hover:bg-slate-100 font-poppins font-semibold px-8"
             asChild
           >
             <a href="#services">Our Services</a>
