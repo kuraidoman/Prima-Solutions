@@ -26,8 +26,14 @@ const featuredProjects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="scroll-mt-28 bg-charcoal py-20">
-      <div className="container mx-auto px-4">
+    <section id="projects" className="scroll-mt-28 relative overflow-hidden bg-charcoal py-20">
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: "url('/project_bg.png')" }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-charcoal via-charcoal/95 to-charcoal/70" />
+
+      <div className="container relative z-10 mx-auto px-4">
         <div className="mb-10 grid grid-cols-1 items-center gap-4 sm:grid-cols-3">
           <div className="hidden sm:block" />
           <div className="text-center">

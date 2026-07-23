@@ -29,9 +29,14 @@ const Footer = () => {
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-gold/40 bg-dark-foreground/5">
                   <MapPin className="w-5 h-5 text-gold" />
                 </span>
-                <p className="text-dark-foreground/80 text-sm">
+                <a
+                  href="https://maps.app.goo.gl/bH9uyaigJJkeLEDt7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-dark-foreground/80 text-sm hover:text-gold transition-colors"
+                >
                   LS2R 2nd Flr, Lemon Square Bldg, EDSA, Quezon City
-                </p>
+                </a>
               </div>
               <div className="flex items-center gap-3">
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-gold/40 bg-dark-foreground/5">
@@ -41,7 +46,7 @@ const Footer = () => {
                   href="tel:(02) 8294 0871"
                   className="text-dark-foreground/80 text-sm hover:text-gold transition-colors"
                 >
-                  (02) 8294 0871
+                  +639260536612
                 </a>
               </div>
             </div>
