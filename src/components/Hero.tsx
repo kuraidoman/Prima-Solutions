@@ -14,7 +14,7 @@ const Hero = () => {
         }}
       /> 
       <div className="absolute inset-0 bg-gradient-to-r from-black/100 via-black/60 to-transparent" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-28 bg-gradient-to-b from-transparent via-white/75 to-white backdrop-blur-[2px] md:h-10" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-black/90" />
 
       <div className="container relative z-10 mx-auto px-4 py-10 md:py-16">
         <div className="max-w-3xl text-left">
