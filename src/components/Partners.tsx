@@ -102,7 +102,7 @@ const Partners = () => {
           {[...partners, ...partners].map((partner, i) => (
             <div
               key={i}
-              className="flex items-center justify-center mx-8 min-w-[200px] h-28 rounded-lg border border-border bg-transparent px-6 transition-all duration-300 hover:shadow-lg cursor-pointer"
+              className="flex items-center justify-center mx-8 min-w-[200px] h-28 rounded-lg border border-border bg-white px-6 transition-all duration-300 hover:shadow-lg cursor-pointer"
             >
               <div className="flex items-center justify-center w-full h-full py-2">
                 <img

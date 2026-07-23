@@ -1,20 +1,93 @@
-// src/components/About.tsx
+import { ArrowRight, Building2, DraftingCompass, RadioTower } from "lucide-react";
+
 const About = () => {
   return (
-    <section id="about" className="scroll-mt-28 py-12 bg-white">
+    <section id="about" className="scroll-mt-28 py-16 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="font-poppins text-3xl md:text-4xl font-bold text-charcoal text-center mb-4">
-          About Prima Solution
-        </h2>
-        <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-          Prima Solution Development and Construction Corp. is a full-service design and build firm 
-          specializing in residential, commercial, and telecom projects. From concept to construction, 
-          we deliver innovative, safe, and reliable solutions you can trust.
-        </p>
-        <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-            Today, the company is supported by a growing team of 30+ in-house employees and a 120+ skilled labor workforce, strengthened by long-standing partnerships with trusted suppliers and allied firms. Our continued collaboration with these partners reflects our commitment to quality, reliability, and excellence in every project we deliver.
-        </p>
-        {/* Add your about content */}
+        <div className="grid grid-cols-1 gap-12 items-center lg:grid-cols-2">
+          {/* Left: Photo */}
+          <div className="h-96 lg:h-[500px] rounded-lg overflow-hidden">
+            <img
+              src="/group_photo.jpg"
+              alt="PRIMA Solution team"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          {/* Right: Content */}
+          <div>
+            <h2 className="font-poppins text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-6 leading-tight">
+              Who we are
+            </h2>
+            <div className="w-16 h-1 bg-gold mb-8" />
+
+            <div className="space-y-4 text-gray-700 leading-relaxed">
+              <p>
+                PRIMA Solution Development and Construction Corp. specializes in telecom infrastructure, structural engineering, forensic investigation, retrofitting, and design-build construction.
+              </p>
+              <p>
+                Since 2021, we have delivered innovative, safe, and reliable solutions for more than 350 structural assessments and 120+ construction projects nationwide. Our success is built on a growing team of 30+ in-house employees and 120+ skilled labor workforce, strengthened by long-standing partnerships with trusted suppliers and allied firms.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-20 border-t border-gray-200 pt-16">
+          <h3 className="mb-12 text-center font-poppins text-3xl font-bold text-dark md:text-4xl">
+            Our Journey
+          </h3>
+
+          <div className="relative mx-auto max-w-6xl">
+            <div className="absolute left-[16.667%] right-0 top-5 hidden border-t-2 border-gold md:block" />
+            <ArrowRight
+              className="absolute right-[-0.5rem] top-3 hidden h-5 w-5 text-gold md:block"
+              aria-hidden="true"
+            />
+            <div className="grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-0">
+              <article className="relative flex flex-col items-center text-center">
+                <div className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full border-2 border-gold bg-white shadow-[0_0_0_6px_rgba(255,255,255,0.85)]">
+                  <span className="h-4 w-4 rounded-full bg-gold" />
+                </div>
+                <p className="mt-4 font-poppins text-3xl font-bold text-gold">2021</p>
+                <div className="mt-3 flex h-16 w-16 items-center justify-center rounded-full bg-gold/10">
+                  <DraftingCompass className="h-8 w-8 text-charcoal" aria-hidden="true" />
+                </div>
+                <h4 className="mt-4 font-poppins text-lg font-semibold text-dark">Started</h4>
+                <p className="mt-1 max-w-[12rem] text-sm leading-relaxed text-gray-700">
+                  as a design-focused engineering company
+                </p>
+              </article>
+
+              <article className="relative flex flex-col items-center text-center">
+                <div className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full border-2 border-gold bg-white shadow-[0_0_0_6px_rgba(255,255,255,0.85)]">
+                  <span className="h-4 w-4 rounded-full bg-gold" />
+                </div>
+                <p className="mt-4 font-poppins text-3xl font-bold text-gold">2024</p>
+                <div className="mt-3 flex h-16 w-16 items-center justify-center rounded-full bg-gold/10">
+                  <Building2 className="h-8 w-8 text-charcoal" aria-hidden="true" />
+                </div>
+                <h4 className="mt-4 font-poppins text-lg font-semibold text-dark">Expanded</h4>
+                <p className="mt-1 max-w-[12rem] text-sm leading-relaxed text-gray-700">
+                  into construction operations
+                </p>
+              </article>
+
+              <article className="relative flex flex-col items-center text-center">
+                <div className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full border-2 border-gold bg-white shadow-[0_0_0_6px_rgba(255,255,255,0.85)]">
+                  <span className="h-4 w-4 rounded-full bg-gold" />
+                </div>
+                <p className="mt-4 font-poppins text-3xl font-bold text-gold">2026</p>
+                <div className="mt-3 flex h-16 w-16 items-center justify-center rounded-full bg-gold/10">
+                  <RadioTower className="h-8 w-8 text-charcoal" aria-hidden="true" />
+                </div>
+                <h4 className="mt-4 font-poppins text-lg font-semibold text-dark">Leading</h4>
+                <p className="mt-1 max-w-[12rem] text-sm leading-relaxed text-gray-700">
+                  telecom infrastructure solutions
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

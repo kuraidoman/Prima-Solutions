@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link, useNavigate } from "react-router-dom"; // 1. Import Link and useNavigate
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const navLinks = [
   { label: "Home", href: "/#home" },
@@ -15,7 +15,9 @@ const navLinks = [
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const navigate = useNavigate(); // Hook for programmatic navigation
+  const navigate = useNavigate();
+  const location = useLocation();
+  const isTransparent = location.pathname === "/" && !scrolled;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -25,23 +27,28 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-shadow bg-white ${
-        scrolled ? "shadow-md" : ""
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isTransparent ? "bg-transparent" : "bg-white shadow-md"
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between h-25 px-4">
+      <div className="container mx-auto flex items-center justify-between h-24 px-4">
         <Link to="/" className="font-poppins font-bold text-xl text-dark">
-          <img src="/PrimaSolution.png" alt="PrimaSolution" className="h-16" />
+          <img
+            src={isTransparent ? "/PrimaSolution_bg.png" : "/PrimaSolution.png"}
+            alt="PrimaSolution"
+            className="h-16"
+          />
         </Link>
 
         {/* Desktop links */}
         <ul className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <li key={link.label}>
-              {/* Note: Use <a> for hash links (#home), but <Link> for new pages (/projects) */}
               <a
                 href={link.href}
-                className="relative text-base font-medium text-foreground hover:text-gold transition-colors after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-gold after:transition-all hover:after:w-full"
+                className={`relative text-base font-medium transition-colors after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-gold after:content-[''] after:transition-all hover:text-gold hover:after:w-full ${
+                  isTransparent ? "text-dark-foreground" : "text-foreground"
+                }`}
               >
                 {link.label}
               </a>
@@ -49,7 +56,6 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* 2. Wrap Button in Link or use onClick navigate */}
         <Button 
           onClick={() => navigate("/consult")} 
           className="hidden md:inline-flex bg-gold hover:bg-gold-light text-dark font-poppins font-semibold"
@@ -59,7 +65,7 @@ const Navbar = () => {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden text-foreground"
+          className={`md:hidden ${isTransparent ? "text-dark-foreground" : "text-foreground"}`}
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
@@ -83,7 +89,6 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          {/* 3. Mobile Consult Button */}
           <Button 
             onClick={() => {
               navigate("/consult");
