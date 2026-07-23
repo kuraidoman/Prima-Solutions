@@ -26,7 +26,7 @@ const featuredProjects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="scroll-mt-28 bg-background py-20">
+    <section id="projects" className="scroll-mt-28 bg-black py-20">
       <div className="container mx-auto px-4">
         <div className="mb-10 grid grid-cols-1 items-center gap-4 sm:grid-cols-3">
           <div className="hidden sm:block" />
