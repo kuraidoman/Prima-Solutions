@@ -1,16 +1,34 @@
+import { useEffect, useState } from "react";
 import { ArrowRight, Building2, DraftingCompass, RadioTower } from "lucide-react";
 
+const employeePhotos = [
+  "/employees/3.png",
+  "/employees/4.png",
+  "/employees/5.png",
+  "/employees/6.png",
+];
+
 const About = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % employeePhotos.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section id="about" className="scroll-mt-28 py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 gap-12 items-center lg:grid-cols-2">
           {/* Left: Photo */}
-          <div className="h-56 lg:h-72 rounded-lg overflow-hidden">
+          <div className="h-56 lg:h-72 rounded-lg overflow-hidden bg-white">
             <img
-              src="/group_photo.jpg"
+              key={activeIndex}
+              src={employeePhotos[activeIndex]}
               alt="PRIMA Solution team"
-              className="w-full h-full object-cover"
+              className="h-full w-full animate-in fade-in object-contain duration-700"
             />
           </div>
 
