@@ -26,12 +26,12 @@ const featuredProjects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="scroll-mt-28 bg-black py-20">
+    <section id="projects" className="scroll-mt-28 bg-charcoal py-20">
       <div className="container mx-auto px-4">
         <div className="mb-10 grid grid-cols-1 items-center gap-4 sm:grid-cols-3">
           <div className="hidden sm:block" />
           <div className="text-center">
-            <span className="font-poppins text-sm font-bold uppercase tracking-[0.3em] text-gold">
+            <span className="font-poppins text-3xl md:text-4xl font-bold text-center mb-2 text-white">
               Featured Projects
             </span>
             <div className="mx-auto mt-2 h-1 w-16 bg-gold" />
