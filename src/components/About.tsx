@@ -6,7 +6,7 @@ const About = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 gap-12 items-center lg:grid-cols-2">
           {/* Left: Photo */}
-          <div className="h-96 lg:h-[500px] rounded-lg overflow-hidden">
+          <div className="h-56 lg:h-72 rounded-lg overflow-hidden">
             <img
               src="/group_photo.jpg"
               alt="PRIMA Solution team"
@@ -16,10 +16,10 @@ const About = () => {
 
           {/* Right: Content */}
           <div>
-            <h2 className="font-poppins text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-6 leading-tight">
+            <h2 className="font-poppins text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-3 leading-tight">
               Who we are
             </h2>
-            <div className="w-16 h-1 bg-gold mb-8" />
+            <div className="w-16 h-1 bg-gold mb-4" />
 
             <div className="space-y-4 text-gray-700 leading-relaxed">
               <p>
@@ -32,7 +32,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="mt-20 border-t border-gray-200 pt-16">
+        <div className="mt-10">
           <h3 className="mb-12 text-center font-poppins text-3xl font-bold text-dark md:text-4xl">
             Our Journey
           </h3>
