@@ -46,7 +46,7 @@ const Footer = () => {
                   href="tel:(02) 8294 0871"
                   className="text-dark-foreground/80 text-sm hover:text-gold transition-colors"
                 >
-                  +639260536612
+                  +63 926 053 6612
                 </a>
               </div>
             </div>

@@ -37,7 +37,7 @@ const Consult = () => {
               <div className="space-y-8">
                 <section>
                   <h4 className="text-sm font-bold text-gold uppercase tracking-widest">Contact Number</h4>
-                  <p className="mt-1 text-lg text-charcoal font-medium">(02) 8294 0871</p>
+                  <p className="mt-1 text-lg text-charcoal font-medium">+63 926 053 6612</p>
                 </section>
 
                 <section>
