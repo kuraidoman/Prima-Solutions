@@ -8,7 +8,7 @@ const Footer = () => {
     >
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/footer_img.jpg')" }}
+        style={{ backgroundImage: "url('/footer_down.jpg')" }}
       />
       <div className="absolute inset-0 bg-gradient-to-r from-dark via-dark/95 to-dark/70" />
 
@@ -43,7 +43,7 @@ const Footer = () => {
                   <Phone className="w-5 h-5 text-gold" />
                 </span>
                 <a
-                  href="tel:(02) 8294 0871"
+                  href="phone: +63 926 053 6612"
                   className="text-dark-foreground/80 text-sm hover:text-gold transition-colors"
                 >
                   +63 926 053 6612
