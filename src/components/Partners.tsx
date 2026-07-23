@@ -4,10 +4,6 @@ const partners = [
     logo: "AllianceTowers.png",
   },
   {
-    name: "ALT Global Solutions, Inc.",
-    logo: "AltGlobal.png",
-  },
-  {
     name: "CEEC",
     logo: "CEDC.png",
   },
@@ -16,20 +12,20 @@ const partners = [
     logo: "CommTrend.png",
   },
   {
-    name: "DITO Telecommunity",
-    logo: "DITO.png",
-  },
-  {
     name: "Edge Point",
     logo: "EdgePoint.png",
+  },
+  {
+    name: "First Beacon Construction & Development Corporation",
+    logo: "FirstBeacon.png",
   },
   {
     name: "Frontier Towers",
     logo: "FrontierTowers.png",
   },
   {
-    name: "Globe",
-    logo: "Globe.png",
+    name: "Infra Towers Philippines",
+    logo: "Infra.png",
   },
   {
     name: "LDIC",
@@ -60,10 +56,6 @@ const partners = [
     logo: "Shakeys.png",
   },
   {
-    name: "Smart",
-    logo: "Smart.png",
-  },
-  {
     name: "SMS Global Technologies Inc.",
     logo: "SMS.png",
   },
@@ -83,11 +75,15 @@ const partners = [
     name: "Uanjelle Land Inc.",
     logo: "Uanjelle.png",
   },
+  {
+    name: "Whitestone",
+    logo: "Whitestone.png",
+  },
 ];
 
 const Partners = () => {
   return (
-    <section className="py-16 bg-[#FFF1C5] overflow-hidden">
+    <section className="py-16 bg-white overflow-hidden">
       <div className="container mx-auto px-4 mb-8">
         <h2 className="font-poppins text-3xl md:text-4xl font-bold text-charcoal text-center mb-2">
           Our Partners
@@ -102,7 +98,7 @@ const Partners = () => {
           {[...partners, ...partners].map((partner, i) => (
             <div
               key={i}
-              className="flex items-center justify-center mx-8 min-w-[200px] h-28 rounded-lg border border-border bg-white px-6 transition-all duration-300 hover:shadow-lg cursor-pointer"
+              className="flex items-center justify-center mx-8 min-w-[200px] h-28 rounded-lg bg-white px-6 transition-all duration-300 hover:shadow-lg cursor-pointer"
             >
               <div className="flex items-center justify-center w-full h-full py-2">
                 <img
