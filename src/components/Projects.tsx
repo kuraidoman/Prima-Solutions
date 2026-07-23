@@ -29,7 +29,7 @@ const Projects = () => {
     <section id="projects" className="scroll-mt-28 relative overflow-hidden bg-charcoal py-20">
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/project_bg.png')" }}
+        style={{ backgroundImage: "url('/footer_up.jpg')" }}
       />
       <div className="absolute inset-0 bg-gradient-to-r from-charcoal via-charcoal/95 to-charcoal/70" />
 

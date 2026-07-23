@@ -8,11 +8,27 @@ const Consult = () => {
     email: '',
     message: ''
   });
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // For now, we'll just log it. We can add EmailJS later!
-    console.log("Inquiry for Prima-struct:", formData);
+    setStatus('sending');
+
+    try {
+      const response = await fetch('/api/consult', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) throw new Error('Request failed');
+
+      setStatus('success');
+      setFormData({ email: '', message: '' });
+    } catch (error) {
+      console.error("Failed to send consult inquiry:", error);
+      setStatus('error');
+    }
   };
 
   return (
@@ -37,7 +53,7 @@ const Consult = () => {
               <div className="space-y-8">
                 <section>
                   <h4 className="text-sm font-bold text-gold uppercase tracking-widest">Contact Number</h4>
-                  <p className="mt-1 text-lg text-charcoal font-medium">(02) 8294 0871</p>
+                  <p className="mt-1 text-lg text-charcoal font-medium">+63 926 053 6612</p>
                 </section>
 
                 <section>
@@ -68,27 +84,43 @@ const Consult = () => {
                     type="email"
                     placeholder="Your Email"
                     className="w-full px-6 py-4 rounded-2xl bg-white border-none shadow-sm focus:ring-2 focus:ring-gold outline-none transition-all"
+                    value={formData.email}
                     onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    disabled={status === 'sending'}
                     required
                   />
                 </div>
-                
+
                 <div>
                   <textarea
                     placeholder="Your message..."
                     rows={8}
                     className="w-full px-6 py-4 rounded-3xl bg-white border-none shadow-sm focus:ring-2 focus:ring-gold outline-none resize-none transition-all"
+                    value={formData.message}
                     onChange={(e) => setFormData({...formData, message: e.target.value})}
+                    disabled={status === 'sending'}
                     required
                   />
                 </div>
 
-                <Button 
+                <Button
                   type="submit"
-                  className="w-full py-7 bg-[#8C701C] hover:bg-[#d6ab2b] text-white font-bold rounded-full text-lg shadow-md transition-transform active:scale-95"
+                  disabled={status === 'sending'}
+                  className="w-full py-7 bg-[#8C701C] hover:bg-[#d6ab2b] text-white font-bold rounded-full text-lg shadow-md transition-transform active:scale-95 disabled:opacity-60"
                 >
-                  Send
+                  {status === 'sending' ? 'Sending...' : 'Send'}
                 </Button>
+
+                {status === 'success' && (
+                  <p className="text-center text-sm font-medium text-green-700">
+                    Message sent! We'll get back to you soon.
+                  </p>
+                )}
+                {status === 'error' && (
+                  <p className="text-center text-sm font-medium text-red-700">
+                    Something went wrong. Please try again or email us directly.
+                  </p>
+                )}
               </form>
             </div>
 
