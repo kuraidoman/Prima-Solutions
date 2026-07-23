@@ -23,7 +23,7 @@ const About = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 gap-12 items-center lg:grid-cols-2">
           {/* Left: Photo */}
-          <div className="h-56 lg:h-72 rounded-lg overflow-hidden bg-white">
+          <div className="h-56 lg:h-72 rounded-lg overflow-hidden">
             <img
               key={activeIndex}
               src={employeePhotos[activeIndex]}
