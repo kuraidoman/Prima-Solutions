@@ -87,7 +87,7 @@ const partners = [
 
 const Partners = () => {
   return (
-    <section className="py-16 bg-[#FFF1C5] overflow-hidden">
+    <section className="relative py-16 bg-white overflow-hidden">
       <div className="container mx-auto px-4 mb-8">
         <h2 className="font-poppins text-3xl md:text-4xl font-bold text-charcoal text-center mb-2">
           Our Partners
@@ -116,6 +116,8 @@ const Partners = () => {
           ))}
         </div>
       </div>
+
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-28 bg-gradient-to-b from-transparent via-dark/75 to-dark backdrop-blur-[2px] md:h-10" />
     </section>
   );
 };
