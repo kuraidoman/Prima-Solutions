@@ -1,62 +1,74 @@
 import { Link } from "react-router-dom";
-import { projects } from "@/data/projects";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselPrevious,
-  CarouselNext,
-} from "@/components/ui/carousel";
+import { ArrowRight } from "lucide-react";
+
+const featuredProjects = [
+  {
+    title: "Vineyard Dasma Cavite Project",
+    location: "Dasmariñas, Cavite",
+    image: "/projects/46.png",
+  },
+  {
+    title: "Castillejos Commons Mall",
+    location: "Castillejos, Zambales",
+    image: "/projects/40.png",
+  },
+  {
+    title: "Telecommunication CME Construction",
+    location: "Nationwide, Philippines",
+    image: "/projects/57.png",
+  },
+  {
+    title: "Various Engineering Designs",
+    location: "Structural & Design Consultancy",
+    image: "/projects/19.png",
+  },
+];
 
 const Projects = () => {
   return (
-    <section id="projects" className="scroll-mt-28 py-20 bg-charcoal">
+    <section id="projects" className="scroll-mt-28 bg-background py-20">
       <div className="container mx-auto px-4">
-        <h2 className="font-poppins text-3xl md:text-4xl font-bold text-charcoal-foreground text-center mb-4">
-          Featured Projects
-        </h2>
-        <p className="text-charcoal-foreground/70 text-center mb-12 max-w-2xl mx-auto">
-          A showcase of our completed and ongoing construction projects.
-        </p>
-
-        <div className="max-w-4xl mx-auto px-12">
-          <Carousel opts={{ loop: true }}>
-            <CarouselContent>
-              {projects.slice(0, 3).map((project) => (
-                <CarouselItem key={project.id}>
-                  <div className="flex flex-col md:flex-row gap-6 items-center">
-                    <div className="w-full md:w-1/2 overflow-hidden rounded-lg">
-                      <img
-                        src={project.images[0]}
-                        alt={project.title}
-                        className="w-full h-64 object-cover"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div className="w-full md:w-1/2 text-charcoal-foreground">
-                      <span className="inline-flex rounded-full bg-white/10 px-3 py-1 text-xs uppercase tracking-[0.2em] text-charcoal-foreground/80">
-                        {project.category}
-                      </span>
-                      <h3 className="font-poppins text-2xl font-bold mt-3 mb-3">
-                        {project.title}
-                      </h3>
-                    </div>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="text-charcoal-foreground border-charcoal-foreground/30 hover:bg-charcoal-foreground/10" />
-            <CarouselNext className="text-charcoal-foreground border-charcoal-foreground/30 hover:bg-charcoal-foreground/10" />
-          </Carousel>
-
-          <div className="mt-10 flex justify-center">
+        <div className="mb-10 grid grid-cols-1 items-center gap-4 sm:grid-cols-3">
+          <div className="hidden sm:block" />
+          <div className="text-center">
+            <span className="font-poppins text-sm font-bold uppercase tracking-[0.3em] text-gold">
+              Featured Projects
+            </span>
+            <div className="mx-auto mt-2 h-1 w-16 bg-gold" />
+          </div>
+          <div className="flex justify-center sm:justify-end">
             <Link
               to="/projects"
-              className="inline-flex rounded-full bg-gold px-8 py-3 text-sm font-semibold text-dark transition hover:bg-gold-light"
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-white px-6 py-3 text-sm font-semibold text-charcoal shadow-sm transition hover:border-gold hover:text-gold"
             >
-              View More Projects
+              View All Projects
+              <ArrowRight size={16} />
             </Link>
           </div>
+        </div>
+
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
+          {featuredProjects.map((project) => (
+            <Link
+              key={project.title}
+              to="/projects"
+              className="group relative block aspect-[4/3] overflow-hidden rounded-2xl shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+            >
+              <img
+                src={project.image}
+                alt={project.title}
+                className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 p-4">
+                <h3 className="font-poppins text-base font-bold leading-snug text-white">
+                  {project.title}
+                </h3>
+                <p className="mt-1 text-xs text-white/70">{project.location}</p>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </section>
