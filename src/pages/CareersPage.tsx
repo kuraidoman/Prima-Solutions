@@ -13,7 +13,7 @@ const CareersPage = () => {
               Careers
             </span>
             <h1 className="mt-4 text-4xl md:text-5xl font-bold text-charcoal">
-              Join Prima-Solution
+              Join Prima Solution
             </h1>
             <p className="mt-4 text-muted-foreground mx-auto max-w-2xl leading-relaxed">
               Opportunities and hiring updates will be posted here.
