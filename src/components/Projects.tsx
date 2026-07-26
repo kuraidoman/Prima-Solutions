@@ -4,23 +4,27 @@ import { ArrowRight } from "lucide-react";
 const featuredProjects = [
   {
     title: "Vineyard Dasma Cavite Project",
+    category: "Residential Project",
     location: "Dasmariñas, Cavite",
-    image: "/projects/46.png",
+    image: "/Residence.jpg",
   },
   {
     title: "Castillejos Commons Mall",
+    category: "Commercial Project",
     location: "Castillejos, Zambales",
-    image: "/projects/40.png",
+    image: "/Commercial.jpg",
   },
   {
-    title: "Telecommunication CME Construction",
-    location: "Nationwide, Philippines",
-    image: "/projects/57.png",
+    title: "Dinadiawan Aurora Telecom Tower",
+    category: "Telecommunications Project",
+    location: "Dinadiawan, Aurora",
+    image: "/Telecomms.jpg",
   },
   {
-    title: "Various Engineering Designs",
+    title: "4PH Pambansang Pabahay Pag-Ibig Housing Project",
+    category: "Design Projects",
     location: "Structural & Design Consultancy",
-    image: "/projects/19.png",
+    image: "/4PH.jpg",
   },
 ];
 
@@ -55,25 +59,29 @@ const Projects = () => {
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
           {featuredProjects.map((project) => (
-            <Link
-              key={project.title}
-              to="/projects"
-              className="group relative block aspect-[4/3] overflow-hidden rounded-2xl shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
-            >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 p-4">
-                <h3 className="font-poppins text-base font-bold leading-snug text-white">
-                  {project.title}
-                </h3>
-                <p className="mt-1 text-xs text-white/70">{project.location}</p>
-              </div>
-            </Link>
+            <div key={project.title}>
+              <Link
+                to="/projects"
+                className="group relative block aspect-[4/3] overflow-hidden rounded-2xl shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+              >
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-4">
+                  <h3 className="font-poppins text-base font-bold leading-snug text-white">
+                    {project.title}
+                  </h3>
+                  <p className="mt-1 text-xs text-white/70">{project.location}</p>
+                </div>
+              </Link>
+              <p className="mt-3 text-center font-poppins text-sm font-bold uppercase tracking-wider text-gold">
+                {project.category}
+              </p>
+            </div>
           ))}
         </div>
       </div>

@@ -7,22 +7,23 @@ import {
 
 const services = [
   {
-    icon: Building2,
-    image: "/services/tower_services.png",
-    title: "Telecom Infrastructure",
+    icon: MapPinned,
+    image: "/services/design_services.png",
+    title: "Design & Build",
     items: [
-      "Tower Design & Construction",
-      "Tower Retrofits & Strengthening",
-      "Site Development",
+      "Residential Buildings",
+      "Industrial Facilities",
+      "Project Management",
+      "Fitouts Construction"
     ],
   },
   {
     icon: SearchCheck,
     image: "/services/structural_analysis.png",
-    title: "Structural Engineering",
+    title: "Architectural Engineering Designs",
     items: [
-      "Structural design",
-      "BIM Modeling",
+      "Architectural design",
+      "MEPFS design",
       "Design review and analysis",
     ],
   },
@@ -33,17 +34,19 @@ const services = [
     items: [
       "Structural Investigation",
       "Condition Assessment",
-      "NDT Testing",
+      "NDT Testing (Rebound Hammer/Rebar Scanner)",
+      "Retrofitting / Strengthening",
     ],
   },
   {
-    icon: MapPinned,
-    image: "/services/design_services.png",
-    title: "Design & Build",
+    icon: Building2,
+    image: "/services/tower_services.png",
+    title: "Telecom Infrastructure",
     items: [
-      "Commercial Buildings",
-      "Industrial Facilities",
-      "Project Management",
+      "Tower Design & Construction",
+      "Tower Retrofits & Strengthening",
+      "Site Development",
+      "Steel Supply and Fabrication",
     ],
   },
 ];
