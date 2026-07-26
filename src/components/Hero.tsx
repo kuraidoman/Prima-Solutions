@@ -10,7 +10,7 @@ const Hero = () => {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('/hero_bg_2.png')",
+          backgroundImage: "url('/hero_bg.png')",
         }}
       /> 
       <div className="absolute inset-0 bg-gradient-to-r from-black/100 via-black/60 to-transparent" />
@@ -19,21 +19,21 @@ const Hero = () => {
       <div className="container relative z-10 mx-auto px-4 py-10 md:py-16">
         <div className="max-w-3xl text-left">
           <p className="mb-4 font-poppins text-sm font-semibold uppercase tracking-[0.12em] text-gold md:text-base">
-            Telecom Infrastructure Specialist
+            DESIGN AND BUILD SPECIALIST
           </p>
           <h1 className="mb-6 font-poppins text-4xl font-bold leading-tight text-dark-foreground md:text-5xl lg:text-6xl">
             Engineering Infrastructure That{" "}
             <span className="text-gold">Connects</span> Communities
           </h1>
           <p className="mb-4 max-w-2xl text-lg leading-relaxed text-dark-foreground/90 md:text-xl">
-            Telecom towers, structural engineering, and design-build solutions
+            Residential, Commercial, Engineering, and Design-Build Solutions
             delivered across the Philippines.
           </p>
 
           <div className="mb-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium text-dark-foreground/90 md:text-base">
             <span>Telecom Towers</span>
             <span className="h-1.5 w-1.5 rounded-full bg-gold" />
-            <span>Structural Engineering</span>
+            <span>Architectural, Engineering, MEPFS</span>
             <span className="h-1.5 w-1.5 rounded-full bg-gold" />
             <span>Design-Build Solutions</span>
           </div>
@@ -43,7 +43,7 @@ const Hero = () => {
               <RadioTower className="h-9 w-9 shrink-0 text-gold" aria-hidden="true" />
               <div>
                 <p className="font-poppins text-2xl font-bold text-dark-foreground">350+</p>
-                <p className="text-sm text-dark-foreground/75">Design & Assessments</p>
+                <p className="text-sm text-dark-foreground/75">Design and Assessments</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
