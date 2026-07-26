@@ -30,7 +30,7 @@ const featuredProjects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="scroll-mt-28 relative overflow-hidden bg-charcoal py-20">
+    <section id="projects" className="scroll-mt-24 relative overflow-hidden bg-charcoal py-20">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: "url('/footer_up.jpg')" }}

@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="scroll-mt-28 relative flex min-h-[50vh] items-center overflow-hidden pt-8"
+      className="scroll-mt-24 relative flex min-h-[50vh] items-center overflow-hidden pt-8"
     >
       <div
         className="absolute inset-0 bg-cover bg-center"

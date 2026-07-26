@@ -53,7 +53,7 @@ const services = [
 
 const Features = () => {
   return (
-    <section id="services" className="scroll-mt-28 bg-background py-20">
+    <section id="services" className="scroll-mt-24 bg-background py-20">
       <div className="container mx-auto px-4">
         <header className="mb-12 text-center">
           <h2 className="mt-3 font-poppins text-4xl font-bold text-charcoal md:text-5xl">

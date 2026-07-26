@@ -19,7 +19,7 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" className="scroll-mt-28 py-16 bg-white">
+    <section id="about" className="scroll-mt-24 py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 gap-12 items-center lg:grid-cols-2">
           {/* Left: Photo */}

@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer
       id="contact"
-      className="scroll-mt-28 relative overflow-hidden bg-dark text-dark-foreground"
+      className="scroll-mt-24 relative overflow-hidden bg-dark text-dark-foreground"
     >
       <div
         className="absolute inset-0 bg-cover bg-center"
