@@ -13,16 +13,16 @@ const Footer = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-dark via-dark/95 to-dark/70" />
 
       <div className="container relative z-10 mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 gap-12 border-b border-dark-foreground/15 pb-12 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-12 border-b border-dark-foreground/15 pb-12 lg:grid-cols-5">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center lg:col-span-2">
             <a href="#" className="font-poppins font-bold text-xl">
               <img src="/PrimaSolution_bg.png" alt="PrimaSolution" className="h-16" />
             </a>
           </div>
 
           {/* Contact Info */}
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:col-span-3 xl:grid-cols-[1.35fr_1.2fr_0.75fr]">
             {/* Col 1: Location & Number */}
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-3">
@@ -33,9 +33,10 @@ const Footer = () => {
                   href="https://maps.app.goo.gl/bH9uyaigJJkeLEDt7"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-dark-foreground/80 text-sm hover:text-gold transition-colors"
+                  className="min-w-0 text-sm leading-relaxed text-dark-foreground/80 transition-colors hover:text-gold"
                 >
-                  LS2R 2nd Flr, Lemon Square Bldg, EDSA, Quezon City
+                  <span className="block">LS2R 2nd Flr, Lemon Square</span>
+                  <span className="block">Bldg, EDSA, Quezon City</span>
                 </a>
               </div>
               <div className="flex items-center gap-3">
@@ -44,7 +45,7 @@ const Footer = () => {
                 </span>
                 <a
                   href="phone: +63 926 053 6612"
-                  className="text-dark-foreground/80 text-sm hover:text-gold transition-colors"
+                  className="min-w-0 text-sm leading-relaxed text-dark-foreground/80 transition-colors hover:text-gold"
                 >
                   +63 926 053 6612
                 </a>
@@ -59,9 +60,10 @@ const Footer = () => {
                 </span>
                 <a
                   href="mailto:primastruct.engineering@gmail.com"
-                  className="text-dark-foreground/80 text-sm hover:text-gold transition-colors break-all"
+                  className="min-w-0 text-sm leading-relaxed text-dark-foreground/80 transition-colors hover:text-gold"
                 >
-                  primastruct.engineering@gmail.com
+                  <span className="block">primastruct.engineering</span>
+                  <span className="block">@gmail.com</span>
                 </a>
               </div>
               <div className="flex items-center gap-3">
@@ -72,9 +74,27 @@ const Footer = () => {
                   href="https://www.facebook.com/profile.php?id=61572640858240"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-dark-foreground/80 text-sm hover:text-gold transition-colors"
+                  className="min-w-0 text-sm leading-relaxed text-dark-foreground/80 transition-colors hover:text-gold"
                 >
-                  Prima Solution Development and Construction Corp.
+                  <span className="block">Prima-Solution Development</span>
+                  <span className="block">and Construction Corp.</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Col 3: Careers Page */}
+            <div className="flex flex-col gap-4">
+              <div className="flex items-center gap-3">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-gold/40 bg-dark-foreground/5">
+                  <FacebookIcon className="w-5 h-5 text-gold" />
+                </span>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61567403392989"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="min-w-0 text-sm leading-relaxed text-dark-foreground/80 transition-colors hover:text-gold"
+                >
+                  Careers Page
                 </a>
               </div>
             </div>
