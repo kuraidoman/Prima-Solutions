@@ -72,7 +72,7 @@ const About = () => {
                 </div>
                 <h4 className="mt-4 font-poppins text-lg font-semibold text-dark">Started</h4>
                 <p className="mt-1 max-w-[12rem] text-sm leading-relaxed text-gray-700">
-                  as a design-focused engineering company
+                  as a design-focused engineering consultancy
                 </p>
               </article>
 
@@ -86,7 +86,7 @@ const About = () => {
                 </div>
                 <h4 className="mt-4 font-poppins text-lg font-semibold text-dark">Expanded</h4>
                 <p className="mt-1 max-w-[12rem] text-sm leading-relaxed text-gray-700">
-                  into construction operations
+                  into construction expansion
                 </p>
               </article>
 
@@ -100,7 +100,7 @@ const About = () => {
                 </div>
                 <h4 className="mt-4 font-poppins text-lg font-semibold text-dark">Leading</h4>
                 <p className="mt-1 max-w-[12rem] text-sm leading-relaxed text-gray-700">
-                  telecom infrastructure solutions
+                  established engineering construction company
                 </p>
               </article>
             </div>
