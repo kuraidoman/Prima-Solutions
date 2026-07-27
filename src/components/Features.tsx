@@ -12,6 +12,7 @@ const services = [
     title: "Design & Build",
     items: [
       "Residential Buildings",
+      "Commercial Buildings",
       "Industrial Facilities",
       "Project Management",
       "Fitouts Construction"
@@ -22,8 +23,8 @@ const services = [
     image: "/services/structural_analysis.png",
     title: "Architectural Engineering Designs",
     items: [
-      "Architectural design",
-      "MEPFS design",
+      "Architectural design", "Structural design",
+      "MEPFS design", "BIM Modeling",
       "Design review and analysis",
     ],
   },

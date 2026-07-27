@@ -37,6 +37,9 @@ const About = () => {
             <h2 className="font-poppins text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-3 leading-tight">
               Who we are
             </h2>
+            <h3 className="mb-4 font-poppins text-sm font-semibold tracking-[0.12em] text-gold md:text-base">
+              Engineering Expertise | Construction Excellence
+            </h3>
             <div className="w-16 h-1 bg-gold mb-4" />
 
             <div className="space-y-4 text-gray-700 leading-relaxed">
