@@ -49,7 +49,7 @@ const Consult = () => {
                 Get In Touch
               </span>
               <h1 className="mt-4 text-4xl font-bold text-charcoal md:text-5xl">
-                We'd Love to Hear From You
+                We'd love to hear from you!
               </h1>
               <p className="mt-4 text-muted-foreground mx-auto max-w-xl leading-relaxed">
                 Reach out through any of the channels below and our team will get back to you.
