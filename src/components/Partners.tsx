@@ -4,6 +4,10 @@ const partners = [
     logo: "AllianceTowers.png",
   },
   {
+    name: "GRAAR",
+    logo: "graar.png",
+  },
+  {
     name: "CEEC",
     logo: "CEDC.png",
   },
@@ -29,7 +33,7 @@ const partners = [
   },
   {
     name: "LDIC",
-    logo: "LDIC.png",
+    logo: "LDIC.jpg",
   },
   {
     name: "Lines + Edges",
