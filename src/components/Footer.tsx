@@ -22,7 +22,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:col-span-3 xl:grid-cols-[1.35fr_1.2fr_0.75fr]">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:col-span-3 lg:ml-auto lg:w-fit lg:justify-items-end">
             {/* Col 1: Location & Number */}
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-3">
@@ -62,8 +62,7 @@ const Footer = () => {
                   href="mailto:primastruct.engineering@gmail.com"
                   className="min-w-0 text-sm leading-relaxed text-dark-foreground/80 transition-colors hover:text-gold"
                 >
-                  <span className="block">primastruct.engineering</span>
-                  <span className="block">@gmail.com</span>
+                  <span className="block">primastruct.engineering@gmail.com</span>
                 </a>
               </div>
               <div className="flex items-center gap-3">
@@ -78,23 +77,6 @@ const Footer = () => {
                 >
                   <span className="block">Prima-Solution Development</span>
                   <span className="block">and Construction Corp.</span>
-                </a>
-              </div>
-            </div>
-
-            {/* Col 3: Careers Page */}
-            <div className="flex flex-col gap-4">
-              <div className="flex items-center gap-3">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-gold/40 bg-dark-foreground/5">
-                  <FacebookIcon className="w-5 h-5 text-gold" />
-                </span>
-                <a
-                  href="https://www.facebook.com/profile.php?id=61567403392989"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="min-w-0 text-sm leading-relaxed text-dark-foreground/80 transition-colors hover:text-gold"
-                >
-                  Careers Page
                 </a>
               </div>
             </div>
