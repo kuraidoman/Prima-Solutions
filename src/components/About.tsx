@@ -2,10 +2,11 @@ import { useEffect, useState } from "react";
 import { ArrowRight, Building2, DraftingCompass, Construction } from "lucide-react";
 
 const employeePhotos = [
-  "/employees/3.png",
-  "/employees/4.png",
+  "/employees/1.png",
+  "/employees/2.jpg",
+  "/employees/3.jpg",
+  "/employees/4.jpg",
   "/employees/5.png",
-  "/employees/6.png",
 ];
 
 const About = () => {
