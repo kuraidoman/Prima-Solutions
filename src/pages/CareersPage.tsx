@@ -157,7 +157,7 @@ const CareersPage = () => {
                     </div>
 
                     <div className="mt-4 border-t border-border pt-4">
-                      <p className="text-sm font-medium text-charcoal/80">Qualifications:</p>
+                      <p className="text-sm font-bold text-charcoal/80">Qualifications:</p>
                       <ul className="mt-2 ml-4 list-disc space-y-1 text-sm text-muted-foreground">
                         {qualifications.map((qualification) => (
                           <li key={qualification}>{qualification}</li>
