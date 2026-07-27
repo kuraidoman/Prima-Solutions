@@ -10,7 +10,7 @@ export interface Project {
 
 const rawProjects = [
   {
-    title: "2-Storey Townhouse Project",
+    title: "2-Storey Townhouse Design Project",
     category: "Residential Constructions",
     images: ["projects/1.webp", "projects/2.webp", "projects/3.webp"],
   },
