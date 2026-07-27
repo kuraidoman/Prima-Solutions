@@ -86,10 +86,10 @@ const ProjectsPage = () => {
               Projects
             </span>
             <h1 className="mt-4 text-4xl md:text-5xl font-bold text-charcoal">
-              Browse Our Projects
+              Project Portfolio
             </h1>
             <p className="mt-4 text-muted-foreground mx-auto max-w-2xl leading-relaxed">
-              Browse our projects and open each gallery for a closer look.
+              Explore our completed projects that showcase our expertise
             </p>
           </div>
         </section>
