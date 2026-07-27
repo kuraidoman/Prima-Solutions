@@ -7,6 +7,10 @@ const employeePhotos = [
   "/employees/3.jpg",
   "/employees/4.jpg",
   "/employees/5.png",
+  "/employees/7.jpg",
+  "/employees/8.jpg",
+  "/employees/9.jpg",
+  "/employees/10.jpg",
 ];
 
 const About = () => {
