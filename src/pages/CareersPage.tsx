@@ -1,4 +1,4 @@
-import { Briefcase, Mail, MapPin, DoorOpen } from "lucide-react";
+import { Briefcase, Mail, MapPin, DoorOpen, FacebookIcon } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -178,7 +178,7 @@ const CareersPage = () => {
                   Send Your Resume
                 </h3>
 
-                <div className="mt-5 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-10">
+                <div className="mt-5 grid grid-cols-1 justify-items-center gap-5 sm:grid-cols-2 sm:justify-items-start sm:gap-x-12">
                   <a
                     href="mailto:marklester.pradas.prima@gmail.com"
                     className="group flex items-center gap-3 text-charcoal transition hover:text-gold"
@@ -191,6 +191,18 @@ const CareersPage = () => {
                     </span>
                   </a>
 
+                  <a
+                    href="mailto:hrad.prima@gmail.com"
+                    className="group flex items-center gap-3 text-charcoal transition hover:text-gold"
+                  >
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-gold/40 bg-white transition group-hover:bg-gold group-hover:text-white">
+                      <Mail className="h-5 w-5 text-gold transition group-hover:text-white" />
+                    </span>
+                    <span className="text-sm font-medium sm:text-base">
+                      hrad.prima@gmail.com
+                    </span>
+                  </a>
+
                   <div className="flex items-center gap-3 text-charcoal">
                     <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-gold/40 bg-white">
                       <MapPin className="h-5 w-5 text-gold" />
@@ -199,6 +211,20 @@ const CareersPage = () => {
                       2nd Floor Lemon Square Building Munoz, Quezon City
                     </span>
                   </div>
+
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61567403392989"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-center gap-3 text-charcoal transition hover:text-gold"
+                  >
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-gold/40 bg-white transition group-hover:bg-gold group-hover:text-white">
+                      <FacebookIcon className="h-5 w-5 text-gold transition group-hover:text-white" />
+                    </span>
+                    <span className="text-left text-sm font-medium sm:text-base">
+                      Careers at Prima Solution Development and Construction Corp.
+                    </span>
+                  </a>
                 </div>
               </div>
             </div>
