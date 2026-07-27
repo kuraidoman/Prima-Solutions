@@ -31,7 +31,7 @@ const contactDetails = [
   {
     icon: FacebookIcon,
     label: "Careers Page",
-    value: "Careers Page",
+    value: "Careers at Prima Solution Development and Construction Corp.",
     href: "https://www.facebook.com/profile.php?id=61567403392989",
   },
 ];
