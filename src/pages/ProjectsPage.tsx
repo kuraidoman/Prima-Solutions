@@ -1,6 +1,23 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  LayoutGrid,
+  Home,
+  Paintbrush,
+  Building2,
+  Landmark,
+  Leaf,
+  Building,
+  Ruler,
+  Warehouse,
+  BedDouble,
+  RadioTower,
+  ClipboardList,
+  Server,
+  type LucideIcon,
+} from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import {
@@ -16,6 +33,28 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import { projects } from "@/data/projects";
+
+const categoryIconRules: [RegExp, LucideIcon][] = [
+  [/residential/i, Home],
+  [/fitout/i, Paintbrush],
+  [/mall/i, Building2],
+  [/commercial/i, Landmark],
+  [/sustainab/i, Leaf],
+  [/real estate|housing/i, Building],
+  [/structural/i, Ruler],
+  [/warehouse/i, Warehouse],
+  [/airbnb/i, BedDouble],
+  [/tower/i, RadioTower],
+  [/saq|tssr|site solutioning|cd creation/i, ClipboardList],
+  [/build to suite|bts/i, Building2],
+  [/colocation/i, Server],
+];
+
+const getCategoryIcon = (category: string): LucideIcon => {
+  if (category === "All") return LayoutGrid;
+  const match = categoryIconRules.find(([pattern]) => pattern.test(category));
+  return match ? match[1] : ClipboardList;
+};
 
 const ProjectsPage = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -112,20 +151,24 @@ const ProjectsPage = () => {
                   {/* 2. The scrollable button area */}
                   <div className="flex-1 overflow-y-auto pr-2 custom-scrollbar">
                     <div className="space-y-2">
-                      {categories.map((category) => (
-                        <button
-                          key={category}
-                          type="button"
-                          onClick={() => setSelectedCategory(category)}
-                          className={`block w-full rounded-2xl px-4 py-3 text-left text-sm font-medium transition ${
-                            selectedCategory === category
-                              ? "bg-charcoal text-white"
-                              : "bg-white text-charcoal hover:bg-slate-100"
-                          }`}
-                        >
-                          {category}
-                        </button>
-                      ))}
+                      {categories.map((category) => {
+                        const Icon = getCategoryIcon(category);
+                        return (
+                          <button
+                            key={category}
+                            type="button"
+                            onClick={() => setSelectedCategory(category)}
+                            className={`flex w-full items-center gap-3 rounded-2xl px-4 py-3 text-left text-sm font-medium transition ${
+                              selectedCategory === category
+                                ? "bg-charcoal text-white"
+                                : "bg-white text-charcoal hover:bg-slate-100"
+                            }`}
+                          >
+                            <Icon className="h-4 w-4 shrink-0" />
+                            {category}
+                          </button>
+                        );
+                      })}
                     </div>
                   </div>
                 </div>
@@ -133,20 +176,24 @@ const ProjectsPage = () => {
 
               <div>
                 <div className="mb-6 flex flex-wrap gap-3 lg:hidden">
-                  {categories.map((category) => (
-                    <button
-                      key={category}
-                      type="button"
-                      onClick={() => setSelectedCategory(category)}
-                      className={`rounded-full border px-4 py-2 text-sm font-medium transition ${
-                        selectedCategory === category
-                          ? "border-charcoal bg-charcoal text-white"
-                          : "border-border bg-white text-charcoal hover:border-charcoal"
-                      }`}
-                    >
-                      {category}
-                    </button>
-                  ))}
+                  {categories.map((category) => {
+                    const Icon = getCategoryIcon(category);
+                    return (
+                      <button
+                        key={category}
+                        type="button"
+                        onClick={() => setSelectedCategory(category)}
+                        className={`flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition ${
+                          selectedCategory === category
+                            ? "border-charcoal bg-charcoal text-white"
+                            : "border-border bg-white text-charcoal hover:border-charcoal"
+                        }`}
+                      >
+                        <Icon className="h-4 w-4 shrink-0" />
+                        {category}
+                      </button>
+                    );
+                  })}
                 </div>
 
                 <div className="space-y-8">
