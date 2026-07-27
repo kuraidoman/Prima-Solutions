@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ArrowRight, Building2, DraftingCompass, RadioTower } from "lucide-react";
+import { ArrowRight, Building2, DraftingCompass, Construction } from "lucide-react";
 
 const employeePhotos = [
   "/employees/3.png",
@@ -82,11 +82,11 @@ const About = () => {
                 </div>
                 <p className="mt-4 font-poppins text-3xl font-bold text-gold">2024</p>
                 <div className="mt-3 flex h-16 w-16 items-center justify-center rounded-full bg-gold/10">
-                  <Building2 className="h-8 w-8 text-charcoal" aria-hidden="true" />
+                  <Construction className="h-8 w-8 text-charcoal" aria-hidden="true" />
                 </div>
                 <h4 className="mt-4 font-poppins text-lg font-semibold text-dark">Expanded</h4>
                 <p className="mt-1 max-w-[12rem] text-sm leading-relaxed text-gray-700">
-                  into construction expansion
+                  into construction operations
                 </p>
               </article>
 
@@ -96,7 +96,7 @@ const About = () => {
                 </div>
                 <p className="mt-4 font-poppins text-3xl font-bold text-gold">2026</p>
                 <div className="mt-3 flex h-16 w-16 items-center justify-center rounded-full bg-gold/10">
-                  <RadioTower className="h-8 w-8 text-charcoal" aria-hidden="true" />
+                  <Building2 className="h-8 w-8 text-charcoal" aria-hidden="true" />
                 </div>
                 <h4 className="mt-4 font-poppins text-lg font-semibold text-dark">Leading</h4>
                 <p className="mt-1 max-w-[12rem] text-sm leading-relaxed text-gray-700">

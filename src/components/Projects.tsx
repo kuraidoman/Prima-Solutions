@@ -23,7 +23,7 @@ const featuredProjects = [
   {
     title: "4PH Pambansang Pabahay Pag-Ibig Housing Project",
     category: "Design Projects",
-    location: "Structural & Design Consultancy",
+    location: "Gamu, Isabela",
     image: "/4PH.jpg",
   },
 ];
