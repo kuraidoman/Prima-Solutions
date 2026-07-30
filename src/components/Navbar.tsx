@@ -25,6 +25,33 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (!href.includes("#")) {
+      setMobileOpen(false);
+      return;
+    }
+
+    const id = href.split("#")[1];
+
+    // The footer (and its #contact anchor) is rendered on every page,
+    // so it can always be scrolled to without navigating home first.
+    if (id === "contact") {
+      e.preventDefault();
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      setMobileOpen(false);
+      return;
+    }
+
+    // Home/About/Services sections only exist on the Index page.
+    e.preventDefault();
+    if (location.pathname === "/") {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate(`/#${id}`);
+    }
+    setMobileOpen(false);
+  };
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -46,6 +73,7 @@ const Navbar = () => {
             <li key={link.label}>
               <a
                 href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
                 className={`relative text-base font-medium transition-colors after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-gold after:content-[''] after:transition-all hover:text-gold hover:after:w-full ${
                   isTransparent ? "text-dark-foreground" : "text-foreground"
                 }`}
@@ -82,7 +110,7 @@ const Navbar = () => {
                 <a
                   href={link.href}
                   className="text-foreground hover:text-gold transition-colors"
-                  onClick={() => setMobileOpen(false)}
+                  onClick={(e) => handleNavClick(e, link.href)}
                 >
                   {link.label}
                 </a>
