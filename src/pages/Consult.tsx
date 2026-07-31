@@ -14,7 +14,7 @@ const contactDetails = [
     icon: Phone,
     label: "Contact Number",
     value: "+63 926 053 6612",
-    href: "tel:+639260536612",
+    href: "tel: +63 926 053 6612",
   },
   {
     icon: Mail,
@@ -85,7 +85,7 @@ const Consult = () => {
                 asChild
                 className="bg-gold px-8 font-poppins font-semibold text-dark hover:bg-gold-light"
               >
-                <a href="tel:+639260536612">Call Us Now</a>
+                <a href="tel: +63 926 053 6612">Call Us Now</a>
               </Button>
               <Button
                 asChild

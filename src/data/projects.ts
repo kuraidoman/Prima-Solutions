@@ -9,90 +9,213 @@ export interface Project {
 }
 
 const rawProjects = [
-  {
-    title: "2-Storey Townhouse Design Project",
-    category: "Residential Constructions",
-    images: ["projects/1.webp", "projects/2.webp", "projects/3.webp"],
-  },
-  {
-    title: "Vineyard Residences",
-    category: "Residential Constructions",
-    images: ["projects/46.webp", "projects/47.webp", "projects/48.webp"],
-  },
+  //Mall, Commercial and Fitout Constructions
   {
     title: "Nuat Thai Project",
-    category: "Fitout Constructions",
+    category: "Mall, Commercial and Fitout Constructions",
     images: ["projects/4.webp", "projects/5.webp", "projects/6.webp"],
   },
   {
     title: "SM Clark City",
-    category: "Fitout Constructions",
+    category: "Mall, Commercial and Fitout Constructions",
     images: ["projects/7.webp"],
   },
   {
     title: "Ayala Mall Cebu City",
-    category: "Fitout Constructions",
+    category: "Mall, Commercial and Fitout Constructions",
     images: ["projects/8.webp", "projects/9.webp"],
   },
   {
     title: "Pasig Condo",
-    category: "Fitout Constructions",
+    category: "Mall, Commercial and Fitout Constructions",
     images: ["projects/37.webp", "projects/38.webp", "projects/39.webp"],
   },
   {
     title: "Amalfi Ortigas Project",
-    category: "Mall Constructions",
+    category: "Mall, Commercial and Fitout Constructions",
     images: ["projects/10.webp", "projects/11.webp", "projects/12.webp"],
   },
   {
     title: "Castillejos Commons Mall",
-    category: "Mall Constructions",
+    category: "Mall, Commercial and Fitout Constructions",
     images: ["projects/40.webp", "projects/41.webp", "projects/42.webp"],
   },
   {
-    title: "Peri-Peri Lipa City",
-    category: "Commercial Buildings Constructions",
+    title: "Peri-Peri Lipa City Design",
+    category: "Mall, Commercial and Fitout Constructions",
     images: ["projects/13.webp"],
   },
   {
-    title: "Peri-Peri Capitol Pasig",
-    category: "Commercial Buildings Constructions",
+    title: "Peri-Peri Capitol Pasig Design",
+    category: "Mall, Commercial and Fitout Constructions",
     images: ["projects/14.webp"],
   },
   {
-    title: "Peri-Peri MCU",
-    category: "Commercial Buildings Constructions",
+    title: "Peri-Peri MCU Design",
+    category: "Mall, Commercial and Fitout Constructions",
     images: ["projects/24.webp", "projects/25.webp", "projects/26.webp", "projects/27.webp", "projects/28.webp"],
   },
   {
-    title: "Peri-Peri Vermosa",
-    category: "Commercial Buildings Constructions",
+    title: "Peri-Peri Vermosa Design",
+    category: "Mall, Commercial and Fitout Constructions",
     images: ["projects/29.webp", "projects/30.webp", "projects/31.webp", "projects/32.webp", "projects/33.webp"],
   },
+  //End of Mall, Commercial and Fitout Constructions
+
+  //design
+  {
+    title: "2-Storey Townhouse Design Project",
+    category: "Residential Design and Construction Projects",
+    images: ["projects/1.webp", "projects/2.webp", "projects/3.webp"],
+  },
+  
+  //Real Estate and Socialized Housing Project
+  {
+    title: "Vineyard Residences",
+    category: "Real Estate and Socialized Housing Project",
+    images: ["projects/46.webp", "projects/47.webp", "projects/48.webp"],
+  },
+  {
+    title: "Alesea Oeste Commercial",
+    category: "Real Estate and Socialized Housing Project",
+    images: ["projects/43.webp", "projects/44.webp", "projects/45.webp"],
+  },
+  //End of Real Estate and Socialized Housing Project
+
+  //Telecom Tower Construction Projects
+  {
+    title: "Structural Modeling",
+    category: "Telecom Tower Construction Projects",
+    images: ["projects/49.webp"],
+  },
+  {
+    title: "Retrofitting Installations",
+    category: "Telecom Tower Construction Projects",
+    images: ["projects/50.webp", "projects/51.webp", "projects/52.webp"],
+  },
+  {
+    title: "Carbon Fiber Plates Installations",
+    category: "Telecom Tower Construction Projects",
+    images: ["projects/53.webp", "projects/54.webp"],
+  },
+  {
+    title: "Retrofitting Materials",
+    category: "Telecom Tower Construction Projects",
+    images: ["projects/55.webp", "projects/56.webp", "projects/58.webp"],
+  },
+  {
+    title: "SST Retrofitting Installations",
+    category: "Telecom Tower Construction Projects",
+    images: ["projects/57.webp", "projects/59.webp", "projects/60.webp"],
+  },
+  {
+    title: "N1523_SUN MARIVELES BASECO COUNTRY",
+    category: "Telecom Tower Construction Projects",
+    images: ["projects/73.webp", "projects/74.webp", "projects/75.webp", "projects/76.webp", "projects/77.webp", "projects/78.webp"],
+  },
+  {
+    title: "R34_Malita",
+    category: "Telecom Tower Construction Projects",
+    images: ["projects/79.webp", "projects/80.webp", "projects/81.webp", "projects/82.webp", "projects/83.webp", "projects/84.webp"],
+  },
+  {
+    title: "PTCZG0023_NS-BIZ22-B02",
+    category: "Telecom Tower Construction Projects",
+    images: ["projects/85.webp", "projects/86.webp", "projects/87.webp", "projects/88.webp", "projects/89.webp", "projects/90.webp"], 
+  },
+  {
+    title: "PTCZG0024_NS-BIZ22-A49",
+    category: "Telecom Tower Construction Projects",
+    images: ["projects/91.webp", "projects/92.webp", "projects/93.webp", "projects/94.webp", "projects/95.webp", "projects/96.webp"],
+  },
+  {
+    title: "PTAKG0015_NS-NTG20-K10",
+    category: "Telecom Tower Construction Projects",
+    images: ["projects/97.webp", "projects/98.webp", "projects/99.webp", "projects/100.webp", "projects/101.webp", "projects/102.webp"],
+  },
+  {
+    title: "NS_NTG18_B69",
+    category: "Telecom Tower Construction Projects",
+    images: ["projects/103.webp", "projects/104.webp", "projects/105.webp", "projects/106.webp", "projects/107.webp", "projects/108.webp"],
+  },
+  {
+    title: "E02929-B06_NS-TER24-B301",
+    category: "Telecom Tower Construction Projects",
+    images: ["projects/109.webp", "projects/110.webp", "projects/111.webp", "projects/112.webp", "projects/113.webp", "projects/114.webp"],
+  },
+  {
+    title: "PTCZG0020_NS-BIZ20-B65 ",
+    category: "Telecom Tower Construction Projects",
+    images: ["projects/115.webp", "projects/116.webp", "projects/117.webp", "projects/118.webp", "projects/119.webp", "projects/120.webp"],
+  },
+  {
+    title: "E00003-A01_NS-NTG20-B98",
+    category: "Telecom Tower Construction Projects",
+    images: ["projects/121.webp", "projects/122.webp", "projects/123.webp", "projects/124.webp", "projects/125.webp", "projects/126.webp"],
+  },
+  {
+    title: "PTCZG0022_NS-NTG23-G44",
+    category: "Telecom Tower Construction Projects",
+    images: ["projects/127.webp", "projects/128.webp", "projects/129.webp", "projects/130.webp", "projects/131.webp", "projects/132.webp"],
+  },
+  {
+    title: "G6711_QUEZON CITY SHOPWISE COMMONWEALTH",
+    category: "Telecom Tower Construction Projects",
+    images: ["projects/133.webp", "projects/134.webp", "projects/135.webp", "projects/136.webp", "projects/137.webp", "projects/138.webp"],
+  },
+  {
+    title: "S1430_SUN LUCENA QUEZON CITY",
+    category: "Telecom Tower Construction Projects",
+    images: ["projects/139.webp", "projects/140.webp", "projects/141.webp", "projects/142.webp", "projects/143.webp", "projects/144.webp"],
+  },
+  {
+    title: "N1524_SUN MARIVELES ALAS ASIN 2",
+    category: "Telecom Tower Construction Projects",
+    images: ["projects/145.webp", "projects/146.webp", "projects/147.webp", "projects/148.webp", "projects/149.webp", "projects/150.webp"],
+  },
+  {
+    title: "N2325_BAUKO BAGNEN",
+    category: "Telecom Tower Construction Projects",
+    images: ["projects/151.webp", "projects/152.webp", "projects/153.webp", "projects/154.webp"],
+  },
+  //End Telecom Tower Construction Projects
+
+  //Residential Design and Construction Projects
+  {//North Caloocan?
+    title: "Townhouse Projects",
+    category: "Residential Design and Construction Projects",
+    images: ["projects/16.webp"],
+  },
+  {
+    title: "2-3 Storey Residential Projects Design",
+    category: "Residential Design and Construction Projects",
+    images: ["projects/17.webp"],
+  },
+  {
+    title: "4PH Pambansang Bahay Design Projects",
+    category: "Residential Design and Construction Projects",
+    images: ["projects/18.webp"],
+  },
+  //End of Residential Design and Construction Projects
+
+  //Warehouse Construction Projects
+  {
+    title: "Muntinlupa Warehouse CME Works",
+    category: "Warehouse Construction",
+    images: ["projects/22.webp", "projects/23.webp"],
+  },
+  //End of Warehouse Construction Projects
+
+  //wala sa list - OTHER PROJECTS ??
   {
     title: "Seascape Solar",
     category: "Sustainability Constructions",
     images: ["projects/15.webp"],
   },
   {
-    title: "Lotus Pad Bamboo Structure",
+    title: "Lotus Pad Bamboo Design Structure",
     category: "Sustainability Constructions",
     images: ["projects/34.webp", "projects/35.webp", "projects/36.webp"],
-  },
-  {
-    title: "Townhouse Projects",
-    category: "Real Estate and Socialized Housing Project",
-    images: ["projects/16.webp"],
-  },
-  {
-    title: "2-3 Storey Residential Projects",
-    category: "Real Estate and Socialized Housing Project",
-    images: ["projects/17.webp"],
-  },
-  {
-    title: "4PH Pambansang Bahay Projects",
-    category: "Real Estate and Socialized Housing Project",
-    images: ["projects/18.webp"],
   },
   {
     title: "Mid-High Rise Residential Project",
@@ -109,41 +232,7 @@ const rawProjects = [
     category: "Structural Analysis and Calculations",
     images: ["projects/21.webp"],
   },
-  {
-    title: "Muntinlupa Warehouse CME Works",
-    category: "Warehouse Construction",
-    images: ["projects/22.webp", "projects/23.webp"],
-  },
-  {
-    title: "Alesea Oeste Commercial",
-    category: "Airbnb Projects",
-    images: ["projects/43.webp", "projects/44.webp", "projects/45.webp"],
-  },
-  {
-    title: "Structural Modeling",
-    category: "Tower Retrofitting Projects",
-    images: ["projects/49.webp"],
-  },
-  {
-    title: "Retrofitting Installations",
-    category: "Tower Retrofitting Projects",
-    images: ["projects/50.webp", "projects/51.webp", "projects/52.webp"],
-  },
-  {
-    title: "Carbon Fiber Plates Installations",
-    category: "Tower Retrofitting Projects",
-    images: ["projects/53.webp", "projects/54.webp"],
-  },
-  {
-    title: "Retrofitting Materials",
-    category: "Tower Retrofitting Projects",
-    images: ["projects/55.webp", "projects/56.webp", "projects/58.webp"],
-  },
-  {
-    title: "SST Retrofitting Installations",
-    category: "Tower Retrofitting Projects",
-    images: ["projects/57.webp", "projects/59.webp", "projects/60.webp"],
-  },
+  
   {
     title: "Existing Pole Surveys",
     category: "SAQ/TSSR/Site Solutioning/CD Creation",
@@ -168,76 +257,6 @@ const rawProjects = [
     title: "Design and Analysis",
     category: "SAQ/TSSR/Site Solutioning/CD Creation",
     images: ["projects/72.webp"],
-  },
-  {
-    title: "N1523_SUN MARIVELES BASECO COUNTRY",
-    category: "Tower Conversion",
-    images: ["projects/73.webp", "projects/74.webp", "projects/75.webp", "projects/76.webp", "projects/77.webp", "projects/78.webp"],
-  },
-  {
-    title: "R34_Malita",
-    category: "Tower Conversion",
-    images: ["projects/79.webp", "projects/80.webp", "projects/81.webp", "projects/82.webp", "projects/83.webp", "projects/84.webp"],
-  },
-  {
-    title: "PTCZG0023_NS-BIZ22-B02",
-    category: "Build to Suite (BTS) Projects",
-    images: ["projects/85.webp", "projects/86.webp", "projects/87.webp", "projects/88.webp", "projects/89.webp", "projects/90.webp"], 
-  },
-  {
-    title: "PTCZG0024_NS-BIZ22-A49",
-    category: "Build to Suite (BTS) Projects",
-    images: ["projects/91.webp", "projects/92.webp", "projects/93.webp", "projects/94.webp", "projects/95.webp", "projects/96.webp"],
-  },
-  {
-    title: "PTAKG0015_NS-NTG20-K10",
-    category: "Build to Suite (BTS) Projects",
-    images: ["projects/97.webp", "projects/98.webp", "projects/99.webp", "projects/100.webp", "projects/101.webp", "projects/102.webp"],
-  },
-  {
-    title: "NS_NTG18_B69",
-    category: "Build to Suite (BTS) Projects",
-    images: ["projects/103.webp", "projects/104.webp", "projects/105.webp", "projects/106.webp", "projects/107.webp", "projects/108.webp"],
-  },
-  {
-    title: "E02929-B06_NS-TER24-B301",
-    category: "Build to Suite (BTS) Projects",
-    images: ["projects/109.webp", "projects/110.webp", "projects/111.webp", "projects/112.webp", "projects/113.webp", "projects/114.webp"],
-  },
-  {
-    title: "PTCZG0020_NS-BIZ20-B65 ",
-    category: "Build to Suite (BTS) Projects",
-    images: ["projects/115.webp", "projects/116.webp", "projects/117.webp", "projects/118.webp", "projects/119.webp", "projects/120.webp"],
-  },
-  {
-    title: "E00003-A01_NS-NTG20-B98",
-    category: "Build to Suite (BTS) Projects",
-    images: ["projects/121.webp", "projects/122.webp", "projects/123.webp", "projects/124.webp", "projects/125.webp", "projects/126.webp"],
-  },
-  {
-    title: "PTCZG0022_NS-NTG23-G44",
-    category: "Build to Suite (BTS) Projects",
-    images: ["projects/127.webp", "projects/128.webp", "projects/129.webp", "projects/130.webp", "projects/131.webp", "projects/132.webp"],
-  },
-  {
-    title: "G6711_QUEZON CITY SHOPWISE COMMONWEALTH",
-    category: "Colocation Projects",
-    images: ["projects/133.webp", "projects/134.webp", "projects/135.webp", "projects/136.webp", "projects/137.webp", "projects/138.webp"],
-  },
-  {
-    title: "S1430_SUN LUCENA QUEZON CITY",
-    category: "Colocation Projects",
-    images: ["projects/139.webp", "projects/140.webp", "projects/141.webp", "projects/142.webp", "projects/143.webp", "projects/144.webp"],
-  },
-  {
-    title: "N1524_SUN MARIVELES ALAS ASIN 2",
-    category: "Colocation Projects",
-    images: ["projects/145.webp", "projects/146.webp", "projects/147.webp", "projects/148.webp", "projects/149.webp", "projects/150.webp"],
-  },
-  {
-    title: "N2325_BAUKO BAGNEN",
-    category: "Colocation Projects",
-    images: ["projects/151.webp", "projects/152.webp", "projects/153.webp", "projects/154.webp"],
   },
   {
     title: "NS-NTG20-K10",
