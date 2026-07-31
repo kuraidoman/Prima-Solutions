@@ -1,5 +1,12 @@
 import { useEffect, useState } from "react";
-import { ArrowRight, Building2, DraftingCompass, Construction } from "lucide-react";
+import {
+  ArrowRight,
+  Building2,
+  DraftingCompass,
+  Construction,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 
 const employeePhotos = [
   "/employees/1.png",
@@ -21,20 +28,47 @@ const About = () => {
       setActiveIndex((prev) => (prev + 1) % employeePhotos.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, []);
+  }, [activeIndex]);
+
+  const handlePrev = () => {
+    setActiveIndex((prev) => (prev - 1 + employeePhotos.length) % employeePhotos.length);
+  };
+
+  const handleNext = () => {
+    setActiveIndex((prev) => (prev + 1) % employeePhotos.length);
+  };
 
   return (
     <section id="about" className="scroll-mt-24 py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 gap-12 items-center lg:grid-cols-2">
           {/* Left: Photo */}
-          <div className="h-56 lg:h-72 rounded-lg overflow-hidden">
-            <img
-              key={activeIndex}
-              src={employeePhotos[activeIndex]}
-              alt="PRIMA Solution team"
-              className="h-full w-full animate-in fade-in object-contain duration-700"
-            />
+          <div className="relative rounded-lg border border-border bg-white p-2 shadow-sm">
+            <div className="h-56 w-full overflow-hidden rounded-md bg-white lg:h-72">
+              <img
+                key={activeIndex}
+                src={employeePhotos[activeIndex]}
+                alt="PRIMA Solution team"
+                className="h-full w-full animate-in fade-in object-contain duration-700"
+              />
+            </div>
+
+            <button
+              type="button"
+              onClick={handlePrev}
+              aria-label="Previous photo"
+              className="absolute left-4 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-black/40 text-white transition hover:bg-black/60"
+            >
+              <ChevronLeft className="h-5 w-5" />
+            </button>
+            <button
+              type="button"
+              onClick={handleNext}
+              aria-label="Next photo"
+              className="absolute right-4 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-black/40 text-white transition hover:bg-black/60"
+            >
+              <ChevronRight className="h-5 w-5" />
+            </button>
           </div>
 
           {/* Right: Content */}
