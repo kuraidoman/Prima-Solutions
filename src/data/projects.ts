@@ -181,8 +181,8 @@ const rawProjects = [
   //End Telecom Tower Construction Projects
 
   //Residential Design and Construction Projects
-  {//North Caloocan?
-    title: "Townhouse Projects",
+  {
+    title: "North Caloocan Townhouse Design Project",
     category: "Residential Design and Construction Projects",
     images: ["projects/16.webp"],
   },
