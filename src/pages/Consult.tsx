@@ -79,22 +79,6 @@ const Consult = () => {
                 </a>
               ))}
             </div>
-
-            <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-              <Button
-                asChild
-                className="bg-gold px-8 font-poppins font-semibold text-dark hover:bg-gold-light"
-              >
-                <a href="tel: +63 926 053 6612">Call Us Now</a>
-              </Button>
-              <Button
-                asChild
-                variant="outline"
-                className="border-charcoal px-8 font-poppins font-semibold text-charcoal hover:bg-charcoal hover:text-white"
-              >
-                <a href="mailto:primastruct.engineering@gmail.com">Send an Email</a>
-              </Button>
-            </div>
           </div>
         </div>
       </main>
