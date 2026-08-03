@@ -506,7 +506,7 @@ const rawProjects = [
   {
     title: "Signal Testing",
     category: "Other Projects",
-    images: ["projects/signa;-testing/signal-testing-1.webp"],
+    images: ["projects/signal-testing/signal-testing-1.webp"],
   },
   {
     title: "CD/TSSR Creation",
