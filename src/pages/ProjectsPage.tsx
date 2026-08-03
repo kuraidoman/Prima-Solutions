@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import {
   ChevronLeft,
   ChevronRight,
+  ChevronDown,
   LayoutGrid,
   Home,
   Paintbrush,
@@ -16,10 +17,12 @@ import {
   RadioTower,
   ClipboardList,
   Server,
+  MapPinned,
   type LucideIcon,
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import {
   Dialog,
   DialogClose,
@@ -62,6 +65,7 @@ const ProjectsPage = () => {
   const [lightboxIndex, setLightboxIndex] = useState(0);
   const [carouselApis, setCarouselApis] = useState<Record<string, CarouselApi | null>>({});
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
+  const [selectedMap, setSelectedMap] = useState<"design" | "implementation">("design");
 
   useEffect(() => {
     const interval = window.setInterval(() => {
@@ -137,10 +141,7 @@ const ProjectsPage = () => {
           <div className="container mx-auto px-4">
             <div className="grid gap-8 lg:grid-cols-[280px_1fr]">
               <aside className="hidden lg:block">
-                {/* 1. Make the ASIDE sticky and lock it to the top */}
-                <div className="sticky top-28 h-[calc(100vh-140px)] flex flex-col rounded-3xl border border-border bg-card p-6 shadow-sm">
-                  
-                  {/* Header Section (Stays put) */}
+                <div className="sticky top-28 flex h-[calc(100vh-140px)] flex-col rounded-3xl border border-border bg-card p-6 shadow-sm">
                   <div className="mb-6">
                     <h3 className="text-lg font-semibold text-charcoal">Filter by category</h3>
                     <p className="mt-2 text-sm text-muted-foreground">
@@ -148,7 +149,6 @@ const ProjectsPage = () => {
                     </p>
                   </div>
 
-                  {/* 2. The scrollable button area */}
                   <div className="flex-1 overflow-y-auto pr-2 custom-scrollbar">
                     <div className="space-y-2">
                       {categories.map((category) => {
@@ -175,6 +175,67 @@ const ProjectsPage = () => {
               </aside>
 
               <div>
+                <Collapsible defaultOpen className="mb-8 rounded-3xl border border-border bg-card shadow-sm">
+                  <div className="flex items-center justify-between gap-4 border-b border-border p-4 sm:p-6">
+                    <div className="flex items-center gap-2 text-sm font-semibold text-charcoal">
+                      <MapPinned className="h-4 w-4 text-gold" />
+                      Site map overview
+                    </div>
+
+                    <CollapsibleTrigger className="group inline-flex items-center rounded-full border border-border bg-white px-3 py-2 text-sm font-semibold text-charcoal transition hover:border-gold">
+                      <ChevronDown className="h-4 w-4 transition duration-200 group-data-[state=open]:rotate-180" />
+                    </CollapsibleTrigger>
+                  </div>
+
+                  <CollapsibleContent className="p-4 sm:p-6">
+                    <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+                      <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">
+                        Use the buttons to switch between design and implementation locations.
+                      </p>
+
+                      <div className="grid gap-2 sm:grid-cols-2 lg:min-w-[320px]">
+                        <button
+                          type="button"
+                          onClick={() => setSelectedMap("design")}
+                          className={`rounded-2xl border px-4 py-3 text-sm font-semibold transition ${
+                            selectedMap === "design"
+                              ? "border-gold bg-gold/10 text-charcoal"
+                              : "border-border bg-white text-muted-foreground hover:border-gold hover:text-charcoal"
+                          }`}
+                        >
+                          Design Map
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => setSelectedMap("implementation")}
+                          className={`rounded-2xl border px-4 py-3 text-sm font-semibold transition ${
+                            selectedMap === "implementation"
+                              ? "border-gold bg-gold/10 text-charcoal"
+                              : "border-border bg-white text-muted-foreground hover:border-gold hover:text-charcoal"
+                          }`}
+                        >
+                          Implementation Map
+                        </button>
+                      </div>
+                    </div>
+
+                    <div className="mt-5 flex min-h-[420px] items-center justify-center overflow-hidden rounded-3xl border border-border bg-slate-100 p-4 sm:min-h-[520px]">
+                      <img
+                        src={selectedMap === "design" ? "/design_map.png" : "/implem_map.png"}
+                        alt={selectedMap === "design" ? "Design map showing design site locations" : "Implementation map showing implementation site locations"}
+                        className="max-h-[390px] w-full object-contain sm:max-h-[480px]"
+                        loading="lazy"
+                      />
+                    </div>
+
+                    <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                      {selectedMap === "design"
+                        ? "This map highlights the locations where the company handled design work."
+                        : "This map highlights the locations where the company handled implementation work."}
+                    </p>
+                  </CollapsibleContent>
+                </Collapsible>
+
                 <div className="mb-6 flex flex-wrap gap-3 lg:hidden">
                   {categories.map((category) => {
                     const Icon = getCategoryIcon(category);
