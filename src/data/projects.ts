@@ -66,7 +66,7 @@ const rawProjects = [
   {
     title: "2-Storey Townhouse Design Project",
     category: "Residential Design and Construction Projects",
-    images: ["projects/1.webp", "projects/2.webp", "projects/3.webp"],
+    images: ["projects/2-Storey-Townhouse/1.webp", "projects/2-Storey-Townhouse/2.webp", "projects/2-Storey-Townhouse/3.webp"],
   },
   
   //Real Estate and Socialized Housing Project
@@ -189,7 +189,7 @@ const rawProjects = [
   {
     title: "2-3 Storey Residential Projects Design",
     category: "Residential Design and Construction Projects",
-    images: ["projects/17.webp"],
+    images: ["/projects/2-Storey-Townhouse/1.webp"],
   },
   {
     title: "4PH Pambansang Bahay Design Projects",
