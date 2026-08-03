@@ -201,7 +201,11 @@ const rawProjects = [
   {
     title: "Carbon Fiber Plates Installations",
     category: "Telecom Tower Construction Projects",
-    images: [""],
+    images: [
+      "projects/carbon-fiber/carbon-fiber-1.webp",
+      "projects/carbon-fiber/carbon-fiber-2.webp",
+      "projects/carbon-fiber/carbon-fiber-3.webp",
+    ],
   },
   {
     title: "Retrofitting Materials",
