@@ -2,12 +2,33 @@ import sharp from "sharp";
 import { readdir, unlink } from "fs/promises";
 import path from "path";
 
-const dir = "public/projects";
-const files = (await readdir(dir)).filter((f) => /\.png$/i.test(f));
+const dir = "public/projects/";
+
+async function collectImageFiles(currentDir) {
+  const entries = await readdir(currentDir, { withFileTypes: true });
+  const files = [];
+
+  for (const entry of entries) {
+    const fullPath = path.join(currentDir, entry.name);
+
+    if (entry.isDirectory()) {
+      files.push(...await collectImageFiles(fullPath));
+      continue;
+    }
+
+    if (/\.(png|jpe?g)$/i.test(entry.name)) {
+      files.push(fullPath);
+    }
+  }
+
+  return files;
+}
+
+const files = await collectImageFiles(dir);
 
 for (const file of files) {
-  const inputPath = path.join(dir, file);
-  const outputPath = path.join(dir, file.replace(/\.png$/i, ".webp"));
+  const inputPath = file;
+  const outputPath = file.replace(/\.(png|jpe?g)$/i, ".webp");
 
   await sharp(inputPath)
     .resize({ width: 1600, height: 1600, fit: "inside", withoutEnlargement: true })
