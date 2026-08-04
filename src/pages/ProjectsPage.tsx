@@ -175,7 +175,7 @@ const ProjectsPage = () => {
               </aside>
 
               <div>
-                <Collapsible defaultOpen className="mb-8 rounded-3xl border border-border bg-card shadow-sm">
+                <Collapsible defaultOpen className="hidden mb-8 rounded-3xl border border-border bg-card shadow-sm">
                   <div className="flex items-center justify-between gap-4 border-b border-border p-4 sm:p-6">
                     <div className="flex items-center gap-2 text-sm font-semibold text-charcoal">
                       <MapPinned className="h-4 w-4 text-gold" />
