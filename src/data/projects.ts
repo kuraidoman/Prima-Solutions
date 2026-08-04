@@ -442,11 +442,11 @@ const rawProjects = [
     title: "4PH Pambansang Bahay Design Projects",
     category: "Residential Design and Construction Projects",
     images: [
-      "projects/4ph/4ph1.webp",
-      "projects/4ph/4ph2.webp",
-      "projects/4ph/4ph3.webp",
-      "projects/4ph/4ph4.webp",
-      "projects/4ph/4ph5.webp",
+      "projects/4ph1.webp",
+      "projects/4ph2.webp",
+      "projects/4ph3.webp",
+      "projects/4ph4.webp",
+      "projects/4ph5.webp",
     ],
   },
   //End of Residential Design and Construction Projects
