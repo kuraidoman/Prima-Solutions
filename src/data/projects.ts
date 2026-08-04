@@ -124,11 +124,9 @@ const rawProjects = [
       "projects/2-storey-townhouse/2-storey-townhouse-3.webp"
     ],
   },
-  
-  //Real Estate and Socialized Housing Project
   {
     title: "Vineyard Residences",
-    category: "Real Estate and Socialized Housing Project",
+    category: "Residential Design and Construction Projects",
     images: [
       "projects/vineyard/vine-1.webp", 
       "projects/vineyard/vine-2.webp", 
@@ -162,17 +160,17 @@ const rawProjects = [
   },
   {
     title: "Alesea Oeste Commercial",
-    category: "Real Estate and Socialized Housing Project",
+    category: "Residential Design and Construction Projects",
     images: [
+      "projects/alesea/alesea-5.webp", 
       "projects/alesea/alesea-1.webp", 
       "projects/alesea/alesea-2.webp", 
       "projects/alesea/alesea-3.webp", 
       "projects/alesea/alesea-4.webp", 
-      "projects/alesea/alesea-5.webp", 
       "projects/alesea/alesea-6.webp"
     ],
   },
-  //End of Real Estate and Socialized Housing Project
+  //End of Residential Design and Construction Projects
 
   //Telecom Tower Construction Projects
   {
