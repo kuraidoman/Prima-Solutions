@@ -164,12 +164,12 @@ const rawProjects = [
     title: "Alesea Oeste Commercial",
     category: "Real Estate and Socialized Housing Project",
     images: [
+      "projects/alesea/alesea-5.webp",
       "projects/alesea/alesea-6.webp",
       "projects/alesea/alesea-1.webp", 
       "projects/alesea/alesea-2.webp", 
       "projects/alesea/alesea-3.webp", 
-      "projects/alesea/alesea-4.webp", 
-      "projects/alesea/alesea-5.webp", 
+      "projects/alesea/alesea-4.webp",  
     ],
   },
   //End of Real Estate and Socialized Housing Project
