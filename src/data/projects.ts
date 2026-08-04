@@ -199,11 +199,7 @@ const rawProjects = [
   {
     title: "Carbon Fiber Plates Installations",
     category: "Telecom Tower Construction Projects",
-    images: [
-      "projects/carbon-fiber/carbon-fiber-1.webp",
-      "projects/carbon-fiber/carbon-fiber-2.webp",
-      "projects/carbon-fiber/carbon-fiber-3.webp",
-    ],
+    images: [""],
   },
   {
     title: "Retrofitting Materials",
@@ -444,11 +440,11 @@ const rawProjects = [
     title: "4PH Pambansang Bahay Design Projects",
     category: "Residential Design and Construction Projects",
     images: [
-      "projects/4ph/4ph1.webp",
-      "projects/4ph/4ph2.webp",
-      "projects/4ph/4ph3.webp",
-      "projects/4ph/4ph4.webp",
-      "projects/4ph/4ph5.webp",
+      "projects/4ph1.webp",
+      "projects/4ph2.webp",
+      "projects/4ph3.webp",
+      "projects/4ph4.webp",
+      "projects/4ph5.webp",
     ],
   },
   //End of Residential Design and Construction Projects
