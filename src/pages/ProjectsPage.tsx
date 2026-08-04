@@ -18,6 +18,8 @@ import {
   ClipboardList,
   Server,
   MapPinned,
+  ZoomIn,
+  ZoomOut,
   type LucideIcon,
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -66,6 +68,12 @@ const ProjectsPage = () => {
   const [carouselApis, setCarouselApis] = useState<Record<string, CarouselApi | null>>({});
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [selectedMap, setSelectedMap] = useState<"design" | "implementation">("design");
+  const [mapPanelOpen, setMapPanelOpen] = useState(true);
+  const [mapScale, setMapScale] = useState(1);
+  const [mapOffset, setMapOffset] = useState({ x: 0, y: 0 });
+  const [isMapDragging, setIsMapDragging] = useState(false);
+  const [mapDragStart, setMapDragStart] = useState<{ x: number; y: number } | null>(null);
+  const [mapDragOrigin, setMapDragOrigin] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     const interval = window.setInterval(() => {
@@ -118,6 +126,149 @@ const ProjectsPage = () => {
     );
   };
 
+  useEffect(() => {
+    setMapScale(1);
+    setMapOffset({ x: 0, y: 0 });
+  }, [selectedMap]);
+
+  const zoomMap = (direction: "in" | "out") => {
+    setMapScale((current) => {
+      const next = direction === "in" ? current + 0.2 : current - 0.2;
+      return Math.min(2.5, Math.max(0.75, Number(next.toFixed(2))));
+    });
+  };
+
+  const handleMapPointerDown = (event: React.PointerEvent<HTMLDivElement>) => {
+    event.currentTarget.setPointerCapture(event.pointerId);
+    setIsMapDragging(true);
+    setMapDragStart({ x: event.clientX, y: event.clientY });
+    setMapDragOrigin(mapOffset);
+  };
+
+  const handleMapPointerMove = (event: React.PointerEvent<HTMLDivElement>) => {
+    if (!isMapDragging || !mapDragStart) return;
+
+    const deltaX = event.clientX - mapDragStart.x;
+    const deltaY = event.clientY - mapDragStart.y;
+
+    setMapOffset({
+      x: mapDragOrigin.x + deltaX,
+      y: mapDragOrigin.y + deltaY,
+    });
+  };
+
+  const handleMapPointerUp = () => {
+    setIsMapDragging(false);
+    setMapDragStart(null);
+  };
+
+  const renderMapPanel = () => (
+    <Collapsible
+      open={mapPanelOpen}
+      onOpenChange={setMapPanelOpen}
+      className={`flex max-h-[calc(100vh-160px)] flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition-all duration-300 ease-out ${
+        mapPanelOpen ? "w-full max-w-[360px]" : "w-14 max-w-14"
+      }`}
+    >
+      <div className="flex items-stretch border-b border-border">
+        <div className={`flex-1 p-4 sm:p-6 ${mapPanelOpen ? "block" : "hidden"}`}>
+          <div className="flex items-center gap-2 text-sm font-semibold text-charcoal">
+            <MapPinned className="h-4 w-4 text-gold" />
+            Site map overview
+          </div>
+        </div>
+
+        <CollapsibleTrigger
+          aria-label={mapPanelOpen ? "Collapse map panel" : "Expand map panel"}
+          className="group flex w-14 items-center justify-center border-l border-border bg-white text-charcoal transition hover:border-gold hover:text-gold"
+        >
+          <ChevronDown className="h-4 w-4 transition duration-200 group-data-[state=open]:rotate-180" />
+        </CollapsibleTrigger>
+      </div>
+
+      <CollapsibleContent className={mapPanelOpen ? "block flex-1 overflow-y-auto overscroll-contain p-3 sm:p-4" : "hidden"}>
+        <div className="flex flex-col gap-3">
+          <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">
+            Use the buttons to switch between design and implementation locations. Drag inside the map area and use zoom to inspect the pins.
+          </p>
+
+          <div className="grid gap-2 sm:grid-cols-2">
+            <button
+              type="button"
+              onClick={() => setSelectedMap("design")}
+              className={`rounded-xl border px-3 py-2 text-xs font-semibold transition sm:text-sm ${
+                selectedMap === "design"
+                  ? "border-gold bg-gold/10 text-charcoal"
+                  : "border-border bg-white text-muted-foreground hover:border-gold hover:text-charcoal"
+              }`}
+            >
+              Design Map
+            </button>
+            <button
+              type="button"
+              onClick={() => setSelectedMap("implementation")}
+              className={`rounded-xl border px-3 py-2 text-xs font-semibold transition sm:text-sm ${
+                selectedMap === "implementation"
+                  ? "border-gold bg-gold/10 text-charcoal"
+                  : "border-border bg-white text-muted-foreground hover:border-gold hover:text-charcoal"
+              }`}
+            >
+              Implementation Map
+            </button>
+          </div>
+
+          <div className="flex items-center justify-end gap-2">
+            <button
+              type="button"
+              onClick={() => zoomMap("out")}
+              aria-label="Zoom out"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-white text-charcoal transition hover:border-gold hover:text-gold"
+            >
+              <ZoomOut className="h-4 w-4" />
+            </button>
+            <button
+              type="button"
+              onClick={() => zoomMap("in")}
+              aria-label="Zoom in"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-white text-charcoal transition hover:border-gold hover:text-gold"
+            >
+              <ZoomIn className="h-4 w-4" />
+            </button>
+          </div>
+
+          <div className="relative h-[42vh] min-h-[300px] overflow-hidden rounded-3xl border border-border bg-slate-100 p-2 sm:min-h-[360px] sm:h-[48vh]">
+            <div
+              className={`flex h-full w-full items-center justify-center ${isMapDragging ? "cursor-grabbing" : "cursor-grab"} select-none touch-none`}
+              onPointerDown={handleMapPointerDown}
+              onPointerMove={handleMapPointerMove}
+              onPointerUp={handleMapPointerUp}
+              onPointerCancel={handleMapPointerUp}
+              onPointerLeave={handleMapPointerUp}
+            >
+              <img
+                src={selectedMap === "design" ? "/design_map.png" : "/implem_map.png"}
+                alt={selectedMap === "design" ? "Design map showing design site locations" : "Implementation map showing implementation site locations"}
+                className="max-h-full max-w-full select-none object-contain"
+                loading="lazy"
+                draggable={false}
+                style={{
+                  transform: `translate(${mapOffset.x}px, ${mapOffset.y}px) scale(${mapScale})`,
+                  transformOrigin: "center center",
+                }}
+              />
+            </div>
+          </div>
+
+          <p className="text-sm leading-relaxed text-muted-foreground">
+            {selectedMap === "design"
+              ? "This map highlights the locations where the company handled design work."
+              : "This map highlights the locations where the company handled implementation work."}
+          </p>
+        </div>
+      </CollapsibleContent>
+    </Collapsible>
+  );
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -139,7 +290,14 @@ const ProjectsPage = () => {
 
         <section className="border-t border-border py-16">
           <div className="container mx-auto px-4">
-            <div className="grid gap-8 lg:grid-cols-[280px_1fr]">
+            <div
+              className="grid gap-8 lg:transition-[grid-template-columns] lg:duration-300 lg:ease-out"
+              style={{
+                gridTemplateColumns: mapPanelOpen
+                  ? "280px minmax(0,1fr) 360px"
+                  : "280px minmax(0,1fr) 56px",
+              }}
+            >
               <aside className="hidden lg:block">
                 <div className="sticky top-28 flex h-[calc(100vh-140px)] flex-col rounded-3xl border border-border bg-card p-6 shadow-sm">
                   <div className="mb-6">
@@ -175,67 +333,6 @@ const ProjectsPage = () => {
               </aside>
 
               <div>
-                <Collapsible defaultOpen className="hidden mb-8 rounded-3xl border border-border bg-card shadow-sm">
-                  <div className="flex items-center justify-between gap-4 border-b border-border p-4 sm:p-6">
-                    <div className="flex items-center gap-2 text-sm font-semibold text-charcoal">
-                      <MapPinned className="h-4 w-4 text-gold" />
-                      Site map overview
-                    </div>
-
-                    <CollapsibleTrigger className="group inline-flex items-center rounded-full border border-border bg-white px-3 py-2 text-sm font-semibold text-charcoal transition hover:border-gold">
-                      <ChevronDown className="h-4 w-4 transition duration-200 group-data-[state=open]:rotate-180" />
-                    </CollapsibleTrigger>
-                  </div>
-
-                  <CollapsibleContent className="p-4 sm:p-6">
-                    <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
-                      <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">
-                        Use the buttons to switch between design and implementation locations.
-                      </p>
-
-                      <div className="grid gap-2 sm:grid-cols-2 lg:min-w-[320px]">
-                        <button
-                          type="button"
-                          onClick={() => setSelectedMap("design")}
-                          className={`rounded-2xl border px-4 py-3 text-sm font-semibold transition ${
-                            selectedMap === "design"
-                              ? "border-gold bg-gold/10 text-charcoal"
-                              : "border-border bg-white text-muted-foreground hover:border-gold hover:text-charcoal"
-                          }`}
-                        >
-                          Design Map
-                        </button>
-                        <button
-                          type="button"
-                          onClick={() => setSelectedMap("implementation")}
-                          className={`rounded-2xl border px-4 py-3 text-sm font-semibold transition ${
-                            selectedMap === "implementation"
-                              ? "border-gold bg-gold/10 text-charcoal"
-                              : "border-border bg-white text-muted-foreground hover:border-gold hover:text-charcoal"
-                          }`}
-                        >
-                          Implementation Map
-                        </button>
-                      </div>
-                    </div>
-
-                    <div className="mt-5 flex min-h-[420px] items-center justify-center overflow-hidden rounded-3xl border border-border bg-slate-100 p-4 sm:min-h-[520px]">
-                      <img
-                        src={selectedMap === "design" ? "/design_map.png" : "/implem_map.png"}
-                        alt={selectedMap === "design" ? "Design map showing design site locations" : "Implementation map showing implementation site locations"}
-                        className="max-h-[390px] w-full object-contain sm:max-h-[480px]"
-                        loading="lazy"
-                      />
-                    </div>
-
-                    <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                      {selectedMap === "design"
-                        ? "This map highlights the locations where the company handled design work."
-                        : "This map highlights the locations where the company handled implementation work."}
-                    </p>
-                  </CollapsibleContent>
-                </Collapsible>
-
                 <div className="mb-6 flex flex-wrap gap-3 lg:hidden">
                   {categories.map((category) => {
                     const Icon = getCategoryIcon(category);
@@ -342,7 +439,15 @@ const ProjectsPage = () => {
                   )}
                 </div>
               </div>
+
+              <aside className="hidden lg:block">
+                <div className="sticky top-28 ml-auto w-full" style={{ maxWidth: mapPanelOpen ? "360px" : "56px" }}>
+                  {renderMapPanel()}
+                </div>
+              </aside>
             </div>
+
+            <div className="mt-8 lg:hidden">{renderMapPanel()}</div>
           </div>
         </section>
       </main>
