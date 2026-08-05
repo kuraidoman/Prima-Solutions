@@ -218,7 +218,11 @@ const rawProjects = [
   {
     title: "Carbon Fiber Plates Installations",
     category: "Telecom Tower Construction Projects",
-    images: [""],
+    images: [
+      "projects/carbon/carbon-1.webp",
+      "projects/carbon/carbon-2.webp",
+      "projects/carbon/carbon-3.webp",
+      ],
   },
   {
     title: "Retrofitting Materials",
@@ -468,10 +472,10 @@ const rawProjects = [
   },
   //End of Residential Design and Construction Projects
 
-  //Warehouse Construction Projects
+  //Warehouse and Industrial Projects
   {
     title: "Muntinlupa Warehouse CME Works",
-    category: "Warehouse Construction",
+    category: "Warehouse and Industrial Projects",
     images: [
       "projects/muntinlupa/muntinlupa-1.webp", 
       "projects/muntinlupa/muntinlupa-2.webp",
@@ -484,10 +488,10 @@ const rawProjects = [
   },
   {
     title: "Seascape Solar",
-    category: "Warehouse Construction",
+    category: "Warehouse and Industrial Projects",
     images: ["projects/seascape/seascape-1.webp"],
   },
-  //End of Warehouse Construction Projects
+  //End of Warehouse and Industrial Projects
 
   //wala sa list - OTHER PROJECTS ??
   {
