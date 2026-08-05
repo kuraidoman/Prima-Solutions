@@ -170,6 +170,25 @@ const rawProjects = [
       "projects/alesea/alesea-6.webp"
     ],
   },
+  {
+    title: "Lotus Pad Bamboo Design Structure",
+    category: "Residential Design and Construction Projects",
+    images: [
+      "projects/lotus-pad/lotus-pad-1.webp",
+      "projects/lotus-pad/lotus-pad-2.webp",
+      "projects/lotus-pad/lotus-pad-3.webp",
+    ],
+  },
+  {
+    title: "Mid-High Rise Residential Project",
+    category: "Residential Design and Construction Projects",
+    images: ["projects/mid-high-rise/mid-high-rise-1.webp"],
+  },
+  {
+    title: "Unique / Architectural Designs",
+    category: "Residential Design and Construction Projects",
+    images: ["projects/unique/unique-1.webp"],
+  },
   //End of Residential Design and Construction Projects
 
   //Telecom Tower Construction Projects
@@ -440,11 +459,11 @@ const rawProjects = [
     title: "4PH Pambansang Bahay Design Projects",
     category: "Residential Design and Construction Projects",
     images: [
-      "projects/4ph1.webp",
-      "projects/4ph2.webp",
-      "projects/4ph3.webp",
-      "projects/4ph4.webp",
-      "projects/4ph5.webp",
+      "projects/4ph/4ph1.webp",
+      "projects/4ph/4ph2.webp",
+      "projects/4ph/4ph3.webp",
+      "projects/4ph/4ph4.webp",
+      "projects/4ph/4ph5.webp",
     ],
   },
   //End of Residential Design and Construction Projects
@@ -463,33 +482,14 @@ const rawProjects = [
       "projects/muntinlupa/muntinlupa-7.webp",
     ],
   },
+  {
+    title: "Seascape Solar",
+    category: "Warehouse Construction",
+    images: ["projects/seascape/seascape-1.webp"],
+  },
   //End of Warehouse Construction Projects
 
   //wala sa list - OTHER PROJECTS ??
-  {
-    title: "Seascape Solar",
-    category: "Other Projects",
-    images: ["projects/seascape/seascape-1.webp"],
-  },
-  {
-    title: "Lotus Pad Bamboo Design Structure",
-    category: "Other Projects",
-    images: [
-      "projects/lotus-pad/lotus-pad-1.webp",
-      "projects/lotus-pad/lotus-pad-2.webp",
-      "projects/lotus-pad/lotus-pad-3.webp",
-    ],
-  },
-  {
-    title: "Mid-High Rise Residential Project",
-    category: "Other Projects",
-    images: ["projects/mid-high-rise/mid-high-rise-1.webp"],
-  },
-  {
-    title: "Unique / Architectural Designs",
-    category: "Other Projects",
-    images: ["projects/unique/unique-1.webp"],
-  },
   {
     title: "3D & BIM Model",
     category: "Other Projects",

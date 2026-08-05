@@ -261,8 +261,8 @@ const ProjectsPage = () => {
 
           <p className="text-sm leading-relaxed text-muted-foreground">
             {selectedMap === "design"
-              ? "This map highlights the locations where the company handled design work."
-              : "This map highlights the locations where the company handled implementation work."}
+              ? "This map highlights the locations where PRIMA has successfully delivered engineering design services across the Philippines."
+              : "This map highlights the locations where PRIMA has successfully delivered construction services across the Philippines. "}
           </p>
         </div>
       </CollapsibleContent>
