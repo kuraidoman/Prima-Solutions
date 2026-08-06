@@ -191,6 +191,74 @@ const rawProjects = [
   },
   //End of Residential Design and Construction Projects
 
+  //Start of Carbon Fiber Wrap and Plates Retrofitting
+  {
+    title: "RM Mall",
+    category: "Carbon Fiber Wrap and Plates Retrofitting",
+    images: [
+      "projects/rm-mall/rm-1.webp", 
+      "projects/rm-mall/rm-2.webp", 
+      "projects/rm-mall/rm-3.webp", 
+      "projects/rm-mall/rm-4.webp", 
+      "projects/rm-mall/rm-5.webp",
+      "projects/rm-mall/rm-6.webp",
+      "projects/rm-mall/rm-7.webp",
+      "projects/rm-mall/rm-8.webp",
+      "projects/rm-mall/rm-9.webp"
+    ],
+  },
+  {
+    title: "G4296",
+    category: "Carbon Fiber Wrap and Plates Retrofitting",
+    images: [
+      "projects/G4296/G4296-1.webp",
+      "projects/G4296/G4296-2.webp",
+      "projects/G4296/G4296-3.webp",
+      "projects/G4296/G4296-4.webp",
+      "projects/G4296/G4296-5.webp",
+      "projects/G4296/G4296-6.webp",
+      "projects/G4296/G4296-7.webp",
+      "projects/G4296/G4296-8.webp",
+      "projects/G4296/G4296-9.webp",
+      "projects/G4296/G4296-10.webp",
+      "projects/G4296/G4296-11.webp",
+      "projects/G4296/G4296-12.webp",
+      "projects/G4296/G4296-13.webp",
+      "projects/G4296/G4296-14.webp"
+    ],
+  },
+  {
+    title: "AE71",
+    category: "Carbon Fiber Wrap and Plates Retrofitting",
+    images: [
+      "projects/AE71/AE71-1.webp",
+      "projects/AE71/AE71-2.webp",
+      "projects/AE71/AE71-3.webp",
+      "projects/AE71/AE71-4.webp",
+      "projects/AE71/AE71-5.webp",
+      "projects/AE71/AE71-6.webp",
+      "projects/AE71/AE71-7.webp",
+      "projects/AE71/AE71-8.webp",
+      "projects/AE71/AE71-9.webp",
+      "projects/AE71/AE71-10.webp",
+      "projects/AE71/AE71-11.webp",
+      "projects/AE71/AE71-12.webp",
+      "projects/AE71/AE71-13.webp"
+    ],
+  },
+  {
+    title: "G9196",
+    category: "Carbon Fiber Wrap and Plates Retrofitting",
+    images: [
+      "projects/G9196/G9196-1.webp",
+      "projects/G9196/G9196-2.webp",
+      "projects/G9196/G9196-3.webp",
+      "projects/G9196/G9196-4.webp"
+    ],
+  },
+
+  //End of Carbon Fiber Wrap and Plates Retrofitting
+
   //Telecom Tower Construction Projects
   {
     title: "Structural Modeling",
