@@ -23,7 +23,7 @@ const rawProjects = [
       "projects/nuat/nuat-7.webp"], 
   },
   {
-    title: "SM Clark City",
+    title: "MMassage SM Clark City",
     category: "Mall, Commercial and Fitout Constructions",
     images: [
       "projects/sm-clark/sm-clark-1.webp", 
@@ -36,7 +36,7 @@ const rawProjects = [
     ],
   },
   {
-    title: "Ayala Mall Cebu City",
+    title: "MMassage Ayala Mall Cebu City",
     category: "Mall, Commercial and Fitout Constructions",
     images: [
       "projects/ayala-cebu/ayala-cebu-1.webp", 
@@ -50,7 +50,7 @@ const rawProjects = [
     ],
   },
   {
-    title: "Pasig Condo",
+    title: "Pasig Condo Fitout Project",
     category: "Mall, Commercial and Fitout Constructions",
     images: [
       "projects/pasig/pasig-1.webp", 
@@ -76,9 +76,15 @@ const rawProjects = [
     ],
   },
   {
-    title: "Castillejos Commons Mall",
+    title: "Castillejos Commons Mall - Zambales Project",
     category: "Mall, Commercial and Fitout Constructions",
-    images: ["projects/castillejos/castillejos-1.webp"],
+    images: [
+      "projects/castillejos/castillejos-1.webp",
+      "projects/castillejos/castillejos-2.webp",
+      "projects/castillejos/castillejos-3.webp",
+      "projects/castillejos/castillejos-4.webp",
+      "projects/castillejos/castillejos-5.webp"
+    ],
   },
   {
     title: "Peri-Peri Lipa City Design",
@@ -116,6 +122,17 @@ const rawProjects = [
 
   //design
   {
+    title: "Vineyard Residences",
+    category: "Residential Design and Construction Projects",
+    images: [
+      "projects/vineyard/vine-1.webp", 
+      "projects/vineyard/vine-2.webp", 
+      "projects/vineyard/vine-3.webp", 
+      "projects/vineyard/vine-4.webp", 
+      "projects/vineyard/vine-5.webp"
+    ],
+  },
+  {
     title: "2-Storey Townhouse Design Project",
     category: "Residential Design and Construction Projects",
     images: [
@@ -125,49 +142,13 @@ const rawProjects = [
     ],
   },
   {
-    title: "Vineyard Residences",
-    category: "Residential Design and Construction Projects",
-    images: [
-      "projects/vineyard/vine-1.webp", 
-      "projects/vineyard/vine-2.webp", 
-      "projects/vineyard/vine-3.webp", 
-      "projects/vineyard/vine-4.webp", 
-      "projects/vineyard/vine-5.webp", 
-      "projects/vineyard/vine-6.webp", 
-      "projects/vineyard/vine-7.webp", 
-      "projects/vineyard/vine-8.webp", 
-      "projects/vineyard/vine-9.webp", 
-      "projects/vineyard/vine-10.webp", 
-      "projects/vineyard/vine-11.webp", 
-      "projects/vineyard/vine-12.webp", 
-      "projects/vineyard/vine-13.webp", 
-      "projects/vineyard/vine-14.webp", 
-      "projects/vineyard/vine-15.webp", 
-      "projects/vineyard/vine-16.webp", 
-      "projects/vineyard/vine-17.webp", 
-      "projects/vineyard/vine-18.webp", 
-      "projects/vineyard/vine-19.webp", 
-      "projects/vineyard/vine-20.webp", 
-      "projects/vineyard/vine-21.webp", 
-      "projects/vineyard/vine-22.webp", 
-      "projects/vineyard/vine-23.webp", 
-      "projects/vineyard/vINE-24.webp", 
-      "projects/vineyard/vINE-25.webp", 
-      "projects/vINE-yard/VINE-26.webp", 
-      "projects/VINE-yard/VINE-27.webp", 
-      "projects/VINE-yard/VINE-28.webp"
-    ],
-  },
-  {
     title: "Alesea Oeste Commercial",
     category: "Residential Design and Construction Projects",
     images: [
-      "projects/alesea/alesea-5.webp", 
+      "projects/alesea/alesea-4.webp", 
       "projects/alesea/alesea-1.webp", 
       "projects/alesea/alesea-2.webp", 
-      "projects/alesea/alesea-3.webp", 
-      "projects/alesea/alesea-4.webp", 
-      "projects/alesea/alesea-6.webp"
+      "projects/alesea/alesea-3.webp"
     ],
   },
   {
@@ -193,9 +174,10 @@ const rawProjects = [
 
   //Start of Carbon Fiber Wrap and Plates Retrofitting
   {
-    title: "RM Mall",
+    title: "RM Mall Retrofitting",
     category: "Carbon Fiber Wrap and Plates Retrofitting",
     images: [
+      "projects/rm-mall/rm-10.webp",
       "projects/rm-mall/rm-1.webp", 
       "projects/rm-mall/rm-2.webp", 
       "projects/rm-mall/rm-3.webp", 
@@ -204,11 +186,14 @@ const rawProjects = [
       "projects/rm-mall/rm-6.webp",
       "projects/rm-mall/rm-7.webp",
       "projects/rm-mall/rm-8.webp",
-      "projects/rm-mall/rm-9.webp"
+      "projects/rm-mall/rm-9.webp",
+      "projects/carbon/carbon-1.webp",
+      "projects/carbon/carbon-2.webp",
+      "projects/carbon/carbon-3.webp"
     ],
   },
   {
-    title: "G4296",
+    title: "G4296 Residential Structure Retrofitting",
     category: "Carbon Fiber Wrap and Plates Retrofitting",
     images: [
       "projects/G4296/G4296-1.webp",
@@ -228,7 +213,7 @@ const rawProjects = [
     ],
   },
   {
-    title: "AE71",
+    title: "AE71 Tower Structure Retrofitting",
     category: "Carbon Fiber Wrap and Plates Retrofitting",
     images: [
       "projects/AE71/AE71-1.webp",
@@ -242,12 +227,11 @@ const rawProjects = [
       "projects/AE71/AE71-9.webp",
       "projects/AE71/AE71-10.webp",
       "projects/AE71/AE71-11.webp",
-      "projects/AE71/AE71-12.webp",
-      "projects/AE71/AE71-13.webp"
+      "projects/AE71/AE71-12.webp"
     ],
   },
   {
-    title: "G9196",
+    title: "G9196 Residential Structure Retrofitting",
     category: "Carbon Fiber Wrap and Plates Retrofitting",
     images: [
       "projects/G9196/G9196-1.webp",
@@ -256,7 +240,16 @@ const rawProjects = [
       "projects/G9196/G9196-4.webp"
     ],
   },
-
+  {
+    title: "Tower Pedestal and Foundation Retrofitting",
+    category: "Carbon Fiber Wrap and Plates Retrofitting",
+    images: [
+      "projects/tower-pedestal/pedestal-1.webp",
+      "projects/tower-pedestal/pedestal-2.webp",
+      "projects/tower-pedestal/pedestal-3.webp",
+      "projects/tower-pedestal/pedestal-4.webp"
+    ],
+  },
   //End of Carbon Fiber Wrap and Plates Retrofitting
 
   //Telecom Tower Construction Projects
@@ -264,15 +257,15 @@ const rawProjects = [
     title: "Structural Modeling",
     category: "Telecom Tower Construction Projects",
     images: [
-      "projects/structural/structural-1.webp", 
+      "projects/structural/structural-5.webp", 
       "projects/structural/structural-2.webp", 
       "projects/structural/structural-3.webp", 
       "projects/structural/structural-4.webp", 
-      "projects/structural/structural-5.webp"
+      "projects/structural/structural-1.webp"
     ],
   },
   {
-    title: "Retrofitting Installations",
+    title: "Various Tower Retrofitting Installations",
     category: "Telecom Tower Construction Projects",
     images: [
       "projects/retro-installations/retro-installations-1.webp", 
@@ -281,19 +274,14 @@ const rawProjects = [
       "projects/retro-installations/retro-installations-4.webp", 
       "projects/retro-installations/retro-installations-5.webp", 
       "projects/retro-installations/retro-installations-6.webp", 
-      "projects/retro-installations/retro-installations-7.webp"],
+      "projects/retro-installations/retro-installations-7.webp",
+      "projects/SST-retro/SST-retro-1.webp",
+      "projects/SST-retro/SST-retro-2.webp",
+      "projects/SST-retro/SST-retro-3.webp"
+    ],
   },
   {
-    title: "Carbon Fiber Plates Installations",
-    category: "Telecom Tower Construction Projects",
-    images: [
-      "projects/carbon/carbon-1.webp",
-      "projects/carbon/carbon-2.webp",
-      "projects/carbon/carbon-3.webp",
-      ],
-  },
-  {
-    title: "Retrofitting Materials",
+    title: "HDG Steel Supply and Fabrication",
     category: "Telecom Tower Construction Projects",
     images: [
       "projects/retrofitting-materials/retro-1.webp",
@@ -347,16 +335,7 @@ const rawProjects = [
       ],
   },
   {
-    title: "SST Retrofitting Installations",
-    category: "Telecom Tower Construction Projects",
-    images: [
-      "projects/SST-retro/SST-retro-1.webp",
-      "projects/SST-retro/SST-retro-2.webp",
-      "projects/SST-retro/SST-retro-3.webp",
-    ],
-  },
-  {
-    title: "N1523_SUN MARIVELES BASECO COUNTRY",
+    title: "N1523_Sun Mariveles Baseco Country Tower Conversion",
     category: "Telecom Tower Construction Projects",
     images: [
       "projects/N1523/N1523-1.webp", 
@@ -367,18 +346,18 @@ const rawProjects = [
       "projects/N1523/N1523-6.webp"],
   },
   {
-    title: "R34_Malita",
+    title: "R34_Malita Tower Conversion",
     category: "Telecom Tower Construction Projects",
     images: [
-      "projects/R34/R34-1.webp", 
       "projects/R34/R34-2.webp", 
+      "projects/R34/R34-1.webp", 
       "projects/R34/R34-3.webp", 
       "projects/R34/R34-4.webp", 
       "projects/R34/R34-5.webp", 
       "projects/R34/R34-6.webp"],
   },
   {
-    title: "PTCZG0023_NS-BIZ22-B02",
+    title: "PTCZG0023_NS-BIZ22-B02 Tower Construction",
     category: "Telecom Tower Construction Projects",
     images: [
       "projects/PTCZG0023/PTCZG0023-1.webp", 
@@ -389,7 +368,7 @@ const rawProjects = [
       "projects/PTCZG0023/PTCZG0023-6.webp"], 
   },
   {
-    title: "PTCZG0024_NS-BIZ22-A49",
+    title: "PTCZG0024_NS-BIZ22-A49 Tower Construction",
     category: "Telecom Tower Construction Projects",
     images: [
       "projects/PTCZG0024/PTCZG0024-1.webp", 
@@ -400,7 +379,7 @@ const rawProjects = [
       "projects/PTCZG0024/PTCZG0024-6.webp"],
   },
   {
-    title: "PTAKG0015_NS-NTG20-K10",
+    title: "PTAKG0015_NS-NTG20-K10 Tower Construction",
     category: "Telecom Tower Construction Projects",
     images: [
       "projects/PTAKG0015/PTAKG0015-1.webp",
@@ -412,7 +391,7 @@ const rawProjects = [
     ],
   },
   {
-    title: "NS_NTG18_B69",
+    title: "NS_NTG18_B69 Bipod Construction",
     category: "Telecom Tower Construction Projects",
     images: [
       "projects/ns_ntg18/ns_ntg18-1.webp", 
@@ -423,7 +402,7 @@ const rawProjects = [
       "projects/ns_ntg18/ns_ntg18-6.webp"],
   },
   {
-    title: "E02929-B06_NS-TER24-B301",
+    title: "E02929-B06_NS-TER24-B301 Tower Construction",
     category: "Telecom Tower Construction Projects",
     images: [
       "projects/E02929/E02929-1.webp", 
@@ -435,7 +414,7 @@ const rawProjects = [
       ],
   },
   {
-    title: "PTCZG0020_NS-BIZ20-B65 ",
+    title: "PTCZG0020_NS-BIZ20-B65 Tower Construction",
     category: "Telecom Tower Construction Projects",
     images: [
       "projects/PTCZG0020/PTCZG0020-1.webp", 
@@ -446,15 +425,17 @@ const rawProjects = [
       "projects/PTCZG0020/PTCZG0020-6.webp"],
   },
   {
-    title: "E00003-A01_NS-NTG20-B98",
+    title: "E00003-A01_NS-NTG20-B98 24m Streetpole Construction",
     category: "Telecom Tower Construction Projects",
     images: [
-      "projects/E00003/E00003-1.webp",
+      "projects/E00003/E00003-8.webp",
       "projects/E00003/E00003-2.webp",
       "projects/E00003/E00003-3.webp",
       "projects/E00003/E00003-4.webp",
       "projects/E00003/E00003-5.webp",
-      "projects/E00003/E00003-6.webp"
+      "projects/E00003/E00003-6.webp",
+      "projects/E00003/E00003-7.webp",
+      "projects/E00003/E00003-1.webp"
     ],
   },
   {
@@ -466,11 +447,10 @@ const rawProjects = [
       "projects/PTCZG0022/PTCZG0022-3.webp",
       "projects/PTCZG0022/PTCZG0022-4.webp",
       "projects/PTCZG0022/PTCZG0022-5.webp",
-      "projects/PTCZG0022/PTCZG0022-6.webp"
     ],
   },
   {
-    title: "G6711_QUEZON CITY SHOPWISE COMMONWEALTH",
+    title: "G6711_Quezon City Shopwise Commonwealth Colocation",
     category: "Telecom Tower Construction Projects",
     images: [
       "projects/G6711/G6711-1.webp",
@@ -482,7 +462,7 @@ const rawProjects = [
     ],
   },
   {
-    title: "S1430_SUN LUCENA QUEZON CITY",
+    title: "S1430_Sun Lucena Quezon City Colocation",
     category: "Telecom Tower Construction Projects",
     images: [
       "projects/S1430/S1430-1.webp",
@@ -494,7 +474,7 @@ const rawProjects = [
     ],
   },
   {
-    title: "N1524_SUN MARIVELES ALAS ASIN 2",
+    title: "N1524_Sun Mariveles Alas Asin 2 Colocation",
     category: "Telecom Tower Construction Projects",
     images: [
       "projects/N1524/N1524-1.webp", 
@@ -505,13 +485,33 @@ const rawProjects = [
       "projects/N1524/N1524-6.webp"],
   },
   {
-    title: "N2325_BAUKO BAGNEN",
+    title: "N2325_Bauko Bagnen",
     category: "Telecom Tower Construction Projects",
     images: [
       "projects/N2325/N2325-1.webp", 
       "projects/N2325/N2325-2.webp", 
       "projects/N2325/N2325-3.webp", 
       "projects/N2325/N2325-4.webp"
+    ],
+  },
+  {
+    title: "G583_Zamboanga City 24m Streetpole Construction",
+    category: "Telecom Tower Construction Projects",
+    images: [
+      "projects/G583/G583-1.webp", 
+      "projects/G583/G583-2.webp", 
+      "projects/G583/G583-3.webp"
+    ],
+  },
+  {
+    title: "W99_BF Homes Las Pinas 30m Monopole Construction",
+    category: "Telecom Tower Construction Projects",
+    images: [
+      "projects/W99/W99-1.webp", 
+      "projects/W99/W99-2.webp", 
+      "projects/W99/W99-3.webp",
+      "projects/W99/W99-4.webp",
+      "projects/W99/W99-5.webp"
     ],
   },
   //End Telecom Tower Construction Projects
@@ -523,19 +523,19 @@ const rawProjects = [
     images: ["projects/north-cal-townhouse/north-cal-townhouse-1.webp"],
   },
   {
-    title: "2-3 Storey Residential Projects Design",
+    title: "2-3 Storey Residential Design Project",
     category: "Residential Design and Construction Projects",
     images: ["projects/2-3-storey-residential/2-3-storey-residential.webp"],
   },
   {
-    title: "4PH Pambansang Bahay Design Projects",
+    title: "4PH Pambansang Bahay Design Project",
     category: "Residential Design and Construction Projects",
     images: [
-      "projects/4ph/4ph1.webp",
+      "projects/4ph/4ph5.webp",
       "projects/4ph/4ph2.webp",
       "projects/4ph/4ph3.webp",
       "projects/4ph/4ph4.webp",
-      "projects/4ph/4ph5.webp",
+      "projects/4ph/4ph1.webp",
     ],
   },
   //End of Residential Design and Construction Projects
@@ -555,7 +555,7 @@ const rawProjects = [
     ],
   },
   {
-    title: "Seascape Solar",
+    title: "Seascape Solar Panel Projects",
     category: "Warehouse and Industrial Projects",
     images: ["projects/seascape/seascape-1.webp"],
   },
@@ -564,23 +564,28 @@ const rawProjects = [
   //wala sa list - OTHER PROJECTS ??
   {
     title: "3D & BIM Model",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     images: ["projects/3D/3D-1.webp"],
   },
   
   {
     title: "Existing Pole Surveys",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     images: ["projects/existing/existing-1.webp"],
   },
   {
     title: "Signal Testing",
-    category: "Other Projects",
-    images: ["projects/signal-testing/signal-testing-1.webp"],
+    category: "Design and Other Projects",
+    images: [
+      "projects/signal-testing/signal-testing-1.webp",
+      "projects/signal-testing/signal-testing-2.webp",
+      "projects/signal-testing/signal-testing-3.webp",
+      "projects/signal-testing/signal-testing-4.webp"
+    ],
   },
   {
     title: "CD/TSSR Creation",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     images: [
       "projects/cd/cd-1.webp",
       "projects/cd/cd-2.webp",
@@ -589,7 +594,7 @@ const rawProjects = [
   },
   {
     title: "Site Solutioning",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     images: [
       "projects/site-solutioning/site-solutioning-1.webp", 
       "projects/site-solutioning/site-solutioning-2.webp"
@@ -597,12 +602,12 @@ const rawProjects = [
   },
   {
     title: "Design and Analysis",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     images: ["projects/design-and-analysis/design-and-analysis-1.webp"],
   },
   {
     title: "NS-NTG20-K10",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     address: "Barangay Linabuan Sur, Banga, Aklan",
     description: "3-LEGGED GREENFIELD SELF-SUPPORTING TOWER",
     ownerContractor: "MIDC/PHILTOWER",
@@ -610,7 +615,7 @@ const rawProjects = [
   },
   {
     title: "NS-BIZ22-A49",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     address: "Aguinaldo Corner Quezon St, Gubat, Sorsogon",
     description: "3-LEGGED GREENFIELD SELF-SUPPORTING TOWER",
     ownerContractor: "MIDC/PHILTOWER",
@@ -618,7 +623,7 @@ const rawProjects = [
   },
   {
     title: "NS-BIZ22-B02",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     address: "Brgy. Lucero Jamindan Capiz",
     description: "3-LEGGED GREENFIELD SELF-SUPPORTING TOWER",
     ownerContractor: "MIDC/PHILTOWER",
@@ -626,7 +631,7 @@ const rawProjects = [
   },
   {
     title: "NS-BIZ20-B65",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     address: "Barangay Balijuagan Roxas City, Capiz",
     description: "3-LEGGED GREENFIELD SELF-SUPPORTING TOWER",
     ownerContractor: "MIDC/PHILTOWER",
@@ -634,7 +639,7 @@ const rawProjects = [
   },
   {
     title: "NS-NTG23-G44",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     address: "Brgy. Guintas, Sigma, Capiz",
     description: "3-LEGGED GREENFIELD SELF-SUPPORTING TOWER",
     ownerContractor: "MIDC/PHILTOWER",
@@ -642,7 +647,7 @@ const rawProjects = [
   },
   {
     title: "NS-TER24-B301",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     address: "Brgy. Naddungan, Gattaran, Cagayan",
     description: "3-LEGGED GREENFIELD SELF-SUPPORTING TOWER",
     ownerContractor: "MIDC/PHILTOWER",
@@ -650,7 +655,7 @@ const rawProjects = [
   },
   {
     title: "NS-NTG20-B98",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     address: "Miriam College, Katipunan Quezon City",
     description: "Smart Pole",
     ownerContractor: "MIDC/PHILTOWER",
@@ -658,7 +663,7 @@ const rawProjects = [
   },
   {
     title: "NS-NTG18-B69",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     address: "25 Perla ST., Pasay City",
     description: "6M Rooftop Bipod",
     ownerContractor: "Alliance Tower",
@@ -666,7 +671,7 @@ const rawProjects = [
   },
   {
     title: "NS-NTG20-AD01",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     address: "SEAOIL, EDSA GUADALUPE",
     description: "9M Rooftop Bipod",
     ownerContractor: "Alliance Tower",
@@ -674,7 +679,7 @@ const rawProjects = [
   },
   {
     title: "R34 - MALITA",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     address: "Davao Malita",
     description: "3-LEGGED GREENFIELD SELF-SUPPORTING TOWER",
     ownerContractor: "CTCC/SMART",
@@ -682,7 +687,7 @@ const rawProjects = [
   },
   {
     title: "N1523-BATAAN",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     address: "Mariveles, Bataan",
     description: "3-LEGGED GREENFIELD SELF-SUPPORTING TOWER",
     ownerContractor: "CTCC/SMART",
@@ -690,7 +695,7 @@ const rawProjects = [
   },
   {
     title: "S71 IROSIN",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     address: "St. Michael Church, Brgy. San Julian, Irosin, Sorsogon",
     description: "3-LEGGED GREENFIELD SELF-SUPPORTING TOWER",
     ownerContractor: "SMART/SMSGT",
@@ -698,7 +703,7 @@ const rawProjects = [
   },
   {
     title: "S70 GUBAT",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     address: "Aguinaldo Corner Quezon St, Gubat, Sorsogon",
     description: "3-LEGGED GREENFIELD SELF-SUPPORTING TOWER",
     ownerContractor: "SMART/SMSGT",
@@ -706,7 +711,7 @@ const rawProjects = [
   },
   {
     title: "V67 DONSOL-BUTANDING",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     address: "Dancalan, Donsol, Sorsogon",
     description: "3-LEGGED GREENFIELD SELF-SUPPORTING TOWER",
     ownerContractor: "SMART/SMSGT",
@@ -714,7 +719,7 @@ const rawProjects = [
   },
   {
     title: "G7444 SUN-VALENZUELA CITY-PASO DE BLAS ROAD IRC COMPOUND",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     address: "651 Gen. Luis Road, Brgy. Paso de Blas, Valenzuela City",
     description: "9M ROOFTOP BIPOD",
     ownerContractor: "SMART/SMSGT",
@@ -722,7 +727,7 @@ const rawProjects = [
   },
   {
     title: "4171 CATAINGAN",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     address: "Crossing Poblacion, Cataingan, Masbate",
     description: "3-LEGGED GREENFIELD SELF-SUPPORTING TOWER",
     ownerContractor: "SMART/SMSGT",
@@ -730,7 +735,7 @@ const rawProjects = [
   },
   {
     title: "4139 BULUSAN - SAN ROQUE",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     address: "Brgy. San Roque, Bulusan, Sorsogon",
     description: "3-LEGGED GREENFIELD SELF-SUPPORTING TOWER",
     ownerContractor: "SMART/SMSGT",
@@ -738,7 +743,7 @@ const rawProjects = [
   },
   {
     title: "G7080 SUN - QC-UP DILIMAN 2",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     address: "Social Work Building, UP Diliman, Quezon City",
     description: "ROOFTOP BIPOD",
     ownerContractor: "SMART/SMSGT",
@@ -746,7 +751,7 @@ const rawProjects = [
   },
   {
     title: "G6403 MRT QUEZON AVENUE STATION",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     address: "MRT Quezon Avenue Station, Quezon City, Metro Manila",
     description: "SCATTERED POLES",
     ownerContractor: "SMART/SMSGT",
@@ -754,7 +759,7 @@ const rawProjects = [
   },
   {
     title: "3611 ST. ANTHONY (NEW ST. FRANCIS)",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     address: "Cor. Ipil and Chico St, Anthony Subd., Cainta, Rizal",
     description: "24M GREENFIELD MONOPOLE",
     ownerContractor: "SMART/SMSGT",
@@ -762,7 +767,7 @@ const rawProjects = [
   },
   {
     title: "4793 NAUJAN - SAN JOSE",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     address: "Brgy. San Jose, Naujan, Oriental Mindoro",
     description: "3-LEGGED GREENFIELD SELF-SUPPORTING TOWER",
     ownerContractor: "SMART/SMSGT",
@@ -770,7 +775,7 @@ const rawProjects = [
   },
   {
     title: " S0712 NAGA-CONCEPCION GRANDE",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     address: "Penafrancia Tours Compound, Brgy. Concepcion Grande, Naga City",
     description: "3-LEGGED GREENFIELD SELF-SUPPORTING TOWER",
     ownerContractor: "SMART/SMSGT",
@@ -778,7 +783,7 @@ const rawProjects = [
   },
   {
     title: "S01 RAGAY, CAMARINES SUR",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     address: "PUP-Ragay Compound, Quirino Highway, Santa Cruz, Ragay",
     description: "3-LEGGED GREENFIELD SELF-SUPPORTING TOWER",
     ownerContractor: "SMART/SMSGT",
@@ -786,7 +791,7 @@ const rawProjects = [
   },
   {
     title: "4710 REAL SADDLE - RETROFITTING",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     address: "Siniloan Famy Real Infanta Road Quezon",
     description: "3-LEGGED TUBULAR SST ",
     ownerContractor: "SMART/COMMTREND",
@@ -794,7 +799,7 @@ const rawProjects = [
   },
   {
     title: "4870 TAKURONG 2 - RETROFITTING",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     address: "Takurong, Sultan Kudarat",
     description: "45M – 3 LEGGED TUBULAR SST",
     ownerContractor: "SMART/FIBERHOME/COMMTREND",
@@ -802,7 +807,7 @@ const rawProjects = [
   },
   {
     title: "5146 SAN ISIDRO MANIKLING – FOUNDATION DESIGN",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     address: "Brgy. San Isidro, Manikling, Davao Oriental",
     description: "SPECIAL FOUNDATION DESIGN OF 4-LEGGED SST",
     ownerContractor: "SMART/FIBERHOME/COMMTREND",
@@ -810,7 +815,7 @@ const rawProjects = [
   },
   {
     title: "M1291 SUN DAVAO MAA SUN COLOC - RETROFITTING",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     address: "Maa Talomo Davao City, Davao Del Sur",
     description: "51M – 4 LEGGED ANGULAR SST",
     ownerContractor: "SMART/FIBERHOME/COMMTREND",
@@ -818,7 +823,7 @@ const rawProjects = [
   },
   {
     title: "PROPOSED 2-STOREY TOWNHOUSE",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     address: "Blk 21 Lot 5-A Road 41 Congress Village, Bagumbong Caloocan City",
     description: "2-STOREY TOWNHOUSE PROJECT",
     ownerContractor: "MR. RONNIE L. DAVID",
@@ -826,7 +831,7 @@ const rawProjects = [
   },
   {
     title: "M2320 SUN STA CRUZ CORONAN - RETROFITTING",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     address: "Coronan Sta. Cruz, Davao del Sur",
     description: "52M – 4 LEGGED ANGULAR SST",
     ownerContractor: "SMART/FIBERHOME/COMMTREND",
@@ -834,7 +839,7 @@ const rawProjects = [
   },
   {
     title: "M2410 SUN MATI STAMPA DAHICAN - RETROFITTING",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     address: "Stampa Dahican, Mati City",
     description: "50M – 4 LEGGED ANGULAR SST",
     ownerContractor: "SMART/FIBERHOME/COMMTREND",
@@ -842,7 +847,7 @@ const rawProjects = [
   },
   {
     title: "M5942 SUN KIBURIAO QUEZON BUKIDNON-RETROFITTING",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     address: "Kiburiao Quezon Bukidnon",
     description: "60M – 4 LEGGED ANGULAR SST",
     ownerContractor: "SMART/FIBERHOME/COMMTREND",
@@ -850,7 +855,7 @@ const rawProjects = [
   },
   {
     title: "JAIME B. CHING BUILDING GENERAL HOSPITAL INC.",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     address: "28P. Guevara Ave. Pagsawitan, Santa Cruz, Laguna",
     description: "6-STOREY HOSPITAL BUILDING",
     ownerContractor: "STA. CRUZ GENERAL AND SPECIALITY HOSPITAL INC.",
@@ -858,7 +863,7 @@ const rawProjects = [
   },
   {
     title: "PROPOSED 2-STOREY RESIDENCE",
-    category: "Other Projects",
+    category: "Design and Other Projects",
     address: "Lot 12564-A-2 Brgy. Maymanga, Amadeo, Cavite City",
     description: "2-STOREY RESIENTIAL BUILDING",
     ownerContractor: "TEKTONBILT CONSTRUCTION",

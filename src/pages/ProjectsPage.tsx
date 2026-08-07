@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
   ChevronLeft,
   ChevronRight,
@@ -62,6 +62,7 @@ const getCategoryIcon = (category: string): LucideIcon => {
 };
 
 const ProjectsPage = () => {
+  const location = useLocation();
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxProjectId, setLightboxProjectId] = useState<string | null>(null);
   const [lightboxIndex, setLightboxIndex] = useState(0);
@@ -130,6 +131,17 @@ const ProjectsPage = () => {
     setMapScale(1);
     setMapOffset({ x: 0, y: 0 });
   }, [selectedMap]);
+
+  useEffect(() => {
+    if (!location.hash) return;
+
+    const id = location.hash.slice(1);
+    const timeout = window.setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 0);
+
+    return () => window.clearTimeout(timeout);
+  }, [location]);
 
   const zoomMap = (direction: "in" | "out") => {
     setMapScale((current) => {
@@ -274,13 +286,13 @@ const ProjectsPage = () => {
       <Navbar />
 
       <main className="pt-28">
-        <section className="py-20">
+        <section className="py-12">
           <div className="container mx-auto px-4 text-center">
             <span className="text-gold text-large font-bold uppercase tracking-[0.35em]">
               Projects
             </span>
             <h1 className="mt-4 text-4xl md:text-5xl font-bold text-charcoal">
-              Project Portfolio
+              Our Works
             </h1>
             <p className="mt-4 text-muted-foreground mx-auto max-w-2xl leading-relaxed">
               Explore our completed projects that showcase our expertise
@@ -359,7 +371,8 @@ const ProjectsPage = () => {
                     filteredProjects.map((project) => (
                       <article
                         key={project.id}
-                        className="rounded-3xl border border-border bg-card shadow-sm"
+                        id={project.id}
+                        className="scroll-mt-28 rounded-3xl border border-border bg-card shadow-sm"
                       >
                         {/* We change the grid based on whether images exist */}
                         <div className={`grid gap-6 p-6 ${project.images.length > 0 ? "lg:grid-cols-[1fr_1fr]" : "grid-cols-1"} lg:items-start`}>

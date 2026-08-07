@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { projects } from "@/data/projects";
 
 const featuredProjects = [
   {
@@ -7,26 +8,35 @@ const featuredProjects = [
     category: "Residential Project",
     location: "Dasmariñas, Cavite",
     image: "/Residence.jpg",
+    targetTitle: "Vineyard Residences",
   },
   {
     title: "Castillejos Commons Mall",
     category: "Commercial Project",
     location: "Castillejos, Zambales",
     image: "/Commercial.jpg",
+    targetTitle: "Castillejos Commons Mall - Zambales Project",
   },
   {
     title: "Dinadiawan Aurora Telecom Tower",
     category: "Telecommunications Project",
     location: "Dinadiawan, Aurora",
     image: "/Telecomms.jpg",
+    targetTitle: "Structural Modeling",
   },
   {
     title: "4PH Pambansang Pabahay Pag-Ibig Housing Project",
     category: "Design Projects",
     location: "Gamu, Isabela",
     image: "/4PH.jpg",
+    targetTitle: "4PH Pambansang Bahay Design Project",
   },
 ];
+
+const getProjectHref = (targetTitle: string) => {
+  const project = projects.find((item) => item.title === targetTitle);
+  return project ? `/projects#${project.id}` : "/projects";
+};
 
 const Projects = () => {
   return (
@@ -61,7 +71,7 @@ const Projects = () => {
           {featuredProjects.map((project) => (
             <div key={project.title}>
               <Link
-                to="/projects"
+                to={getProjectHref(project.targetTitle)}
                 className="group relative block aspect-[4/3] overflow-hidden rounded-2xl shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
                 <img

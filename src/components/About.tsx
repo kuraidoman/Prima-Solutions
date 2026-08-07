@@ -16,7 +16,7 @@ const employeePhotos = [
   "/employees/5.png",
   "/employees/7.jpg",
   "/employees/8.jpg",
-  "/employees/9.jpg",
+  "/employees/9.png",
   "/employees/10.jpg",
 ];
 
