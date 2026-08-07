@@ -254,6 +254,17 @@ const rawProjects = [
 
   //Telecom Tower Construction Projects
   {
+    title: "Dinadiawan Aurora Telecom Tower",
+    category: "Telecom Tower Construction Projects",
+    images: [
+      "projects/aurora/aurora-1.webp",
+      "projects/aurora/aurora-2.webp",
+      "projects/aurora/aurora-3.webp",
+      "projects/aurora/aurora-4.webp",
+      "projects/aurora/aurora-5.webp"
+    ]
+  },
+  {
     title: "Structural Modeling",
     category: "Telecom Tower Construction Projects",
     images: [

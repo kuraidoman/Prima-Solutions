@@ -22,7 +22,7 @@ const featuredProjects = [
     category: "Telecommunications Project",
     location: "Dinadiawan, Aurora",
     image: "/Telecomms.jpg",
-    targetTitle: "Structural Modeling",
+    targetTitle: "Dinadiawan Aurora Telecom Tower",
   },
   {
     title: "4PH Pambansang Pabahay Pag-Ibig Housing Project",
@@ -33,9 +33,13 @@ const featuredProjects = [
   },
 ];
 
-const getProjectHref = (targetTitle: string) => {
-  const project = projects.find((item) => item.title === targetTitle);
-  return project ? `/projects#${project.id}` : "/projects";
+const getProjectHref = (project: { targetTitle?: string; href?: string }) => {
+  if (project.href) return project.href;
+
+  if (!project.targetTitle) return "/projects";
+
+  const matchedProject = projects.find((item) => item.title === project.targetTitle);
+  return matchedProject ? `/projects#${matchedProject.id}` : "/projects";
 };
 
 const Projects = () => {
@@ -71,7 +75,7 @@ const Projects = () => {
           {featuredProjects.map((project) => (
             <div key={project.title}>
               <Link
-                to={getProjectHref(project.targetTitle)}
+                to={getProjectHref(project)}
                 className="group relative block aspect-[4/3] overflow-hidden rounded-2xl shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
                 <img
