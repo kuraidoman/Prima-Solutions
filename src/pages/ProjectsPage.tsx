@@ -289,10 +289,10 @@ const ProjectsPage = () => {
         <section className="py-12">
           <div className="container mx-auto px-4 text-center">
             <span className="text-gold text-large font-bold uppercase tracking-[0.35em]">
-              Projects
+              Our Works
             </span>
             <h1 className="mt-4 text-4xl md:text-5xl font-bold text-charcoal">
-              Our Works
+              Project Portfolio
             </h1>
             <p className="mt-4 text-muted-foreground mx-auto max-w-2xl leading-relaxed">
               Explore our completed projects that showcase our expertise
@@ -466,7 +466,7 @@ const ProjectsPage = () => {
       </main>
 
       <Dialog open={lightboxOpen} onOpenChange={setLightboxOpen}>
-        <DialogContent className="w-full max-w-4xl p-0 overflow-hidden bg-transparent shadow-none sm:rounded-none">
+        <DialogContent className="w-full max-w-4xl p-0 bg-transparent shadow-none sm:rounded-none max-h-[calc(100vh-40px)] overflow-auto">
           {lightboxProject && (
             <div className="relative bg-white rounded-3xl shadow-2xl">
               <div className="flex items-center justify-between border-b border-border px-6 py-4">

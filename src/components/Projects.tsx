@@ -25,11 +25,11 @@ const featuredProjects = [
     targetTitle: "Dinadiawan Aurora Telecom Tower",
   },
   {
-    title: "4PH Pambansang Pabahay Pag-Ibig Housing Project",
+    title: "4PH Pambansang Pabahay Design Project",
     category: "Design Projects",
     location: "Gamu, Isabela",
     image: "/4PH.jpg",
-    targetTitle: "4PH Pambansang Bahay Design Project",
+    targetTitle: "4PH Pambansang Pabahay Design Project",
   },
 ];
 

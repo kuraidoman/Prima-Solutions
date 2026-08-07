@@ -283,7 +283,6 @@ const rawProjects = [
       "projects/retro-installations/retro-installations-2.webp", 
       "projects/retro-installations/retro-installations-3.webp", 
       "projects/retro-installations/retro-installations-4.webp", 
-      "projects/retro-installations/retro-installations-5.webp", 
       "projects/retro-installations/retro-installations-6.webp", 
       "projects/retro-installations/retro-installations-7.webp",
       "projects/SST-retro/SST-retro-1.webp",
@@ -539,7 +538,7 @@ const rawProjects = [
     images: ["projects/2-3-storey-residential/2-3-storey-residential.webp"],
   },
   {
-    title: "4PH Pambansang Bahay Design Project",
+    title: "4PH Pambansang Pabahay Design Project",
     category: "Residential Design and Construction Projects",
     images: [
       "projects/4ph/4ph5.webp",
@@ -547,6 +546,7 @@ const rawProjects = [
       "projects/4ph/4ph3.webp",
       "projects/4ph/4ph4.webp",
       "projects/4ph/4ph1.webp",
+      "projects/4ph/4PH.webp"
     ],
   },
   //End of Residential Design and Construction Projects
@@ -585,7 +585,7 @@ const rawProjects = [
     images: ["projects/existing/existing-1.webp"],
   },
   {
-    title: "Signal Testing",
+    title: "Site Hunting, Permitting, Signal Testing",
     category: "Design and Other Projects",
     images: [
       "projects/signal-testing/signal-testing-1.webp",
