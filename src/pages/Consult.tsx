@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, FacebookIcon } from "lucide-react";
+import { Phone, Mail, MapPin, FacebookIcon, Youtube } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -33,6 +33,12 @@ const contactDetails = [
     label: "Careers Page",
     value: "Careers at Prima Solution Development and Construction Corp.",
     href: "https://www.facebook.com/profile.php?id=61567403392989",
+  },
+  {
+    icon: Youtube,
+    label: "YouTube",
+    value: "@PrimaSolution",
+    href: "https://www.youtube.com/@PrimaSolution",
   },
 ];
 
