@@ -52,6 +52,18 @@ const Navbar = () => {
     setMobileOpen(false);
   };
 
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+
+    if (location.pathname === "/") {
+      document.getElementById("home")?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate("/#home");
+    }
+
+    setMobileOpen(false);
+  };
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -59,7 +71,11 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between h-24 px-4">
-        <Link to="/" className="font-poppins font-bold text-xl text-dark">
+        <Link
+          to="/#home"
+          onClick={handleLogoClick}
+          className="font-poppins font-bold text-xl text-dark"
+        >
           <img
             src={isTransparent ? "/PrimaSolution_bg.png" : "/PrimaSolution.png"}
             alt="PrimaSolution"

@@ -106,11 +106,12 @@ const Partners = () => {
             >
               <div className="flex items-center justify-center w-full h-full py-2">
                 <img
-                  src={`/partners/${partner.logo}`}
+                  src={`/partners/optimized/${partner.logo}`}
                   alt={partner.name}
-                  loading="lazy"
+                  loading={i < partners.length ? "eager" : "lazy"}
                   decoding="async"
-                  className="max-h-20 max-w-full object-contain"
+                  draggable={false}
+                  className="max-h-20 max-w-full select-none object-contain"
                 />
               </div>
               <span className="sr-only">{partner.name}</span>
